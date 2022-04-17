@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif !important;
+}
+.about {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+}
+.badge-pill {
+	display: inline-block;
+	padding: 1rem 1.5rem;
+	line-height: 1;
+	color: #42c2ff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 50rem;
+	border: 1px solid #dee2e6;
+	background-color: #fff !important;
+}
+.badge-pill:hover {
+	background-color: #42c2ff !important;
+	border: 1px solid #42c2ff;
+	color: #fff;
+}
+.badge-pill.active {
+	background-color: #42c2ff !important;
+	border: 1px solid #42c2ff;
+	color: #fff !important;
+}
+.bg-primary-green {
+	background-color: #b8fff9;
+}
+
+.bg-base-color {
+	background-color: #effffd;
+}
+
+.btn-primer {
+	background-color: #42c2ff;
+	color: #fff;
+}
+
+.card-diagnosis {
+	border-radius: 25px !important;
+}
+
+.carousel-item {
+	min-height: 200px;
+}
+
+header {
+	z-index: 5;
+	position: fixed;
+	width: 100%;
+	transition: all 0.5s;
+	top: 0px;
+}
+.navbar {
+	transition: all 0.5s;
+	color: #1e272e;
+}
+.nav-txt-link {
+	display: block;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: #1e272e;
+}
+#page2 {
+	background-image: url("../img/rodrigo-flores-unsplash.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: relative;
+}
+#page2::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.78);
+}
+.tab-pane {
+	min-height: 300px;
+}
+.text-base {
+	color: #1e272e !important;
+}
+.text-blue-primer {
+	color: #42c2ff !important;
+}
+.text-title {
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #1e272e !important;
+}
+
+/* TAMPILAN DESKTOP */
+@media (min-width: 992px) {
+	.card-info-sistem {
+		width: 15rem;
+		border-radius: 25px !important;
+	}
+	.card-penyakit {
+		width: 23rem;
+	}
+	.card-penyakit > .card-body {
+		padding-top: 7rem !important;
+	}
+	.number-penyakit {
+		font-size: 9rem;
+		position: absolute;
+		z-index: -1;
+		color: #1e272e;
+		opacity: 20%;
+		font-weight: 800;
+	}
+	.img-gejala {
+		height: 386px;
+		border-radius: 25px;
+	}
+	#page1 {
+		background-image: url("../img/wave-1.svg"), url("../img/wave-2.svg");
+		background-position: right top, left bottom;
+		background-repeat: no-repeat, no-repeat;
+		height: 740px;
+	}
+	#page2 {
+		background-size: cover;
+		background-position: center;
+		height: 650px;
+	}
+	#page2::after {
+		display: block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		overflow: hidden;
+	}
+	#page3 {
+		min-height: 500px;
+	}
+}
