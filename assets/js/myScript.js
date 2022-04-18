@@ -4,18 +4,18 @@ linkGejala.addEventListener("click", function () {
 	const tabMetode = document.getElementById("tabMetode");
 	const tabGejala = document.getElementById("tabGejala");
 	if (tabPenyakit.classList.contains("active")) {
-		console.log("tab penyakit hilang");
+		// console.log("tab penyakit hilang");
 		tabPenyakit.classList.remove("active");
-		document.getElementById("penyakit").classList.remove("show active");
+		document.getElementById("penyakit").classList.remove("show", "active");
 	}
 	if (tabMetode.classList.contains("active")) {
-		console.log("tab metode hilang");
+		// console.log("tab metode hilang");
 		tabMetode.classList.remove("active");
-		document.getElementById("metode").classList.remove("show active");
+		document.getElementById("metode").classList.remove("show", "active");
 	}
 	tabGejala.classList.add("active");
-	console.log("tab gejala muncul");
-	document.getElementById("gejala").classList.add("show active");
+	// console.log("tab gejala muncul");
+	document.getElementById("gejala").classList.add("show", "active");
 });
 
 const btnNext = document.getElementById("btnNext");

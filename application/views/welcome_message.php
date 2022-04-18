@@ -240,13 +240,32 @@
 					<div class="tab-pane fade" id="gejala" role="tabpanel" aria-labelledby="tab-gejala">
 						<div class="row">
 							<div class="col-7">
-								<ol class="list-group list-group-numbered">
-									<li class="list-group-item">A list item</li>
-									<li class="list-group-item">A list item</li>
-									<li class="list-group-item">A list item</li>
-								</ol>
+								<div class="row">
+									<div class="col">
+										<ol class="list-group list-group-numbered border-0">
+											<li class="list-group-item border-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos?</li>
+											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore.</li>
+											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+										</ol>		
+									</div>
+									<div class="col">
+										<ol class="list-group list-group-numbered" start="8">
+											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos?</li>
+											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore.</li>
+											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
+										</ol>
+									</div>
+								</div>
 							</div>
-							<div class="col-5">
+							<div class="col-5 d-flex align-items-center">
 								<img src="<?= base_url('assets/img/clint-mckoy-unsplash.jpg') ?>" alt="tanaman-kopi" class="img-gejala">
 							</div>
 						</div>

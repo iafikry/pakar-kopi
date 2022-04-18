@@ -66,6 +66,9 @@ header {
 	transition: all 0.5s;
 	top: 0px;
 }
+.list-continuing {
+	counter-increment: section !important;
+}
 .navbar {
 	transition: all 0.5s;
 	color: #1e272e;
@@ -123,7 +126,7 @@ header {
 		font-weight: 800;
 	}
 	.img-gejala {
-		height: 386px;
+		height: 315px;
 		border-radius: 25px;
 	}
 	#page1 {
