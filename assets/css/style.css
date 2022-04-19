@@ -56,7 +56,7 @@
 }
 .card-metode {
 	border-radius: 25px;
-	
+	box-shadow: 15px 5px 15px #1111;
 }
 
 .carousel-item {
