@@ -54,6 +54,10 @@
 .card-diagnosis {
 	border-radius: 25px !important;
 }
+.card-metode {
+	border-radius: 25px;
+	
+}
 
 .carousel-item {
 	min-height: 200px;

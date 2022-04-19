@@ -271,7 +271,35 @@
 						</div>
 					</div>
 					<div class="tab-pane fade" id="metode" role="tabpanel" aria-labelledby="tab-metode">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel perspiciatis ipsa deserunt alias. Iste, voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+						<div class="row pt-5">
+							<h5 class="text-base text-center">Terdapat 2 metode perhitungan yang digunakan pada sistem ini, yaitu <i>Backward Chaining</i> dan <i>Technique For Order Preference By Similarity To Ideal Solution</i> (TOPSIS)</h5>
+						</div>
+						<div class="row pt-5 justify-content-center">
+							<div class="col-5">
+								<div class="card card-metode">
+									<div class="card-body text-base">
+										<h5 class="card-title">
+											Backward Chaining
+										</h5>
+										<p>
+											Backward Chaining adalah pendekatan yang dimotori tujuan (goal driven) yaitu pelacakan yang dimulai dari tujuan, selanjutnya dicari aturan yang memiliki tujuan tersebut untuk kesimpulannya. Selanjutnya proses pelacakan menggunakan premis untuk aturan tersebut sebagai tujuan baru dan mencari aturan lain dengan tujuan baru sebagai kesimpulannya (Dahria, 2012).
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-5">
+								<div class="card card-metode">
+									<div class="card-body text-base">
+										<h5 class="card-title">
+											Technique For Order Preference By Similarity To Ideal  Solution (TOPSIS)
+										</h5>
+										<p>
+											Metode TOPSIS adalah salah satu metode pengambilan keputusan multikriteria yang pertama kali diperkenalkan oleh Yoon dan Hwang pada tahun 1981. Metode ini merupakan salah satu metode yang banyak digunakan untuk menyelesaikan pengambilan keputusan secara praktis.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
