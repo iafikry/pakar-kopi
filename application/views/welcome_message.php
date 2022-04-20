@@ -7,22 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<!-- CSS mandiri -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/') ?>style.css">
+	<!-- bootstrap icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>ES Kopi</title>
   </head>
   <body>
 	  <header id="header">
 		<nav class="navbar navbar-expand-lg navbar-light" id="nav-menu">
 			<div class="container">
-				<a class="nav-txt-link" href="#">LOGO</a>
+				<a class="navbar-brand" href="#">
+					<img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+				Bootstrap
+				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav mx-auto text-base">
-						<a class="nav-txt-link" aria-current="page" href="#">Diagnosis</a>
-						<a class="nav-txt-link" href="#">Informasi
+						<a class="nav-txt-link txt-menu" id="menu-diagnosis" aria-current="page" href="#">Diagnosis</a>
+						<a class="nav-txt-link txt-menu" id="menu-informasi" href="#">Informasi
 						</a>
-						<a class="nav-txt-link" href="#">Tentang</a>
+						<a class="nav-txt-link txt-menu" id="menu-tentang" href="#">Tentang</a>
 					</div>
 				</div>
 			</div>
