@@ -103,7 +103,7 @@
 					</div>
 				</div>
 				<div class="row pt-5">
-					<div id="carouselExample" class="carousel slide" data-bs-interval="false">
+					<div id="stageDiagnosis" class="carousel slide" data-bs-interval="false">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="card bg-base-color border-0 card-diagnosis">
@@ -132,12 +132,12 @@
 				</div>
 				<div class="row pt-2 justify-content-end">
 					<div class="col-1 d-flex justify-content-end">
-						<button id="btnPrev" class="btn btn-primer" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" hidden>  
+						<button id="btnPrev" class="btn btn-primer" type="button" data-bs-target="#stageDiagnosis" data-bs-slide="prev" hidden>  
 							Prev
 						</button>
 					</div>
 					<div class="col-1 d-flex justify-content-end">
-						<button id="btnNext" class="btn btn-primer" type="button" data-bs-target="#carouselExample" data-bs-slide="next" disabled>
+						<button id="btnNext" class="btn btn-primer" type="button" data-bs-target="#stageDiagnosis" data-bs-slide="next" disabled>
 							Next
 						</button>
 					</div>
@@ -274,7 +274,7 @@
 						<div class="row pt-5">
 							<h5 class="text-base text-center">Terdapat 2 metode perhitungan yang digunakan pada sistem ini, yaitu <i>Backward Chaining</i> dan <i>Technique For Order Preference By Similarity To Ideal Solution</i> (TOPSIS)</h5>
 						</div>
-						<div class="row pt-5 justify-content-center">
+						<div class="row pt-5 justify-content-evenly">
 							<div class="col-5">
 								<div class="card card-metode">
 									<div class="card-body text-base">
@@ -305,7 +305,20 @@
 			</div>
 		</section>
 	  </main>
-	  <footer></footer>
+	  <footer>
+		  <div class="container">
+			  <div class="row pt-5">
+				  <div class="col-3">
+					  <h4 class="text-uppercase text-light fw-bold">logo</h4>
+				  </div>
+			  </div>
+			  <div class="row">
+				  <div class="col-4">
+					  <p class="text-light">&copy; 2022 ES Kopi | Sistem Pakar Tanaman Kopi</p>
+				  </div>
+			  </div>
+		  </div>
+	  </footer>
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="<?= base_url('assets/js/myScript.js') ?>"></script>

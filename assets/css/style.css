@@ -56,11 +56,17 @@
 }
 .card-metode {
 	border-radius: 25px;
-	box-shadow: 15px 5px 15px #1111;
+	box-shadow: 5px 15px 35px #1111;
+	min-width: 20rem;
+	min-height: 17rem;
 }
 
 .carousel-item {
 	min-height: 200px;
+}
+
+footer {
+	background-color: #68b0ab;
 }
 
 header {
@@ -121,6 +127,9 @@ header {
 	.card-penyakit > .card-body {
 		padding-top: 7rem !important;
 	}
+	footer {
+		min-height: 250px;
+	}
 	.number-penyakit {
 		font-size: 9rem;
 		position: absolute;
@@ -153,6 +162,9 @@ header {
 		overflow: hidden;
 	}
 	#page3 {
-		min-height: 500px;
+		min-height: 700px;
+	}
+	#page4 {
+		min-height: 1000px;
 	}
 }
