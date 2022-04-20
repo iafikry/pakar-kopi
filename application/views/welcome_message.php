@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<!-- CSS mandiri -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/') ?>style.css">
-    <title>SI PAK TOPIK</title>
+    <title>ES Kopi</title>
   </head>
   <body>
 	  <header id="header">
@@ -36,7 +36,7 @@
 						<div class="card border-0">
 							<div class="card-body">
 								<h1 class="text-title">cari tahu penyakit apa yang sedang dialami  oleh tanaman kopimu</h1>
-								<p>SI PAK TOPIK merupakan sistem pakar untuk mendiagnosis penyakit pada tanaman kopi robusta dan liberika</p>
+								<p>ES Kopi merupakan sistem pakar (<i>expert system</i>) untuk mendiagnosis penyakit pada tanaman kopi robusta dan liberika</p>
 								<a href="#page3" class="btn btn-primer">Mulai</a>
 							</div>
 						</div>
@@ -52,7 +52,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg">
-							<h2 class="text-uppercase text-light text-center">si pak topik</h2>
+							<h2 class="text-uppercase text-light text-center">es kopi</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -106,7 +106,7 @@
 					<div id="stageDiagnosis" class="carousel slide" data-bs-interval="false">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<div class="card bg-base-color border-0 card-diagnosis">
+								<div class="card border-0 card-diagnosis">
 									<div class="card-body pt-5 pb-5">
 										<form action="#" method="post">
 											<div class="row justify-content-around">
@@ -130,8 +130,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="row pt-2 justify-content-end">
+				<div class="row pt-2 justify-content-end row-button-next-prev align-items-end">
 					<div class="col-1 d-flex justify-content-end">
+						<button id="btnNextPrev" class="btn btn-primer" type="button" data-bs-target="#stageDiagnosis" data-bs-slide="next" disabled>  
+							Next
+						</button>
+					</div>
+					<!-- <div class="col-1 d-flex justify-content-end">
 						<button id="btnPrev" class="btn btn-primer" type="button" data-bs-target="#stageDiagnosis" data-bs-slide="prev" hidden>  
 							Prev
 						</button>
@@ -140,7 +145,7 @@
 						<button id="btnNext" class="btn btn-primer" type="button" data-bs-target="#stageDiagnosis" data-bs-slide="next" disabled>
 							Next
 						</button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>

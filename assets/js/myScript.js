@@ -18,23 +18,23 @@ linkGejala.addEventListener("click", function () {
 	document.getElementById("gejala").classList.add("show", "active");
 });
 
-const btnNext = document.getElementById("btnNext");
-btnNext.addEventListener("click", function () {
-	btnNext.hidden = true;
-	document.getElementById("btnPrev").removeAttribute("hidden");
-});
+// const btnNext = document.getElementById("btnNext");
+// btnNext.addEventListener("click", function () {
+// 	btnNext.hidden = true;
+// 	document.getElementById("btnPrev").removeAttribute("hidden");
+// });
 
-const btnPrev = document.getElementById("btnPrev");
-btnPrev.addEventListener("click", function () {
-	btnPrev.hidden = true;
-	document.getElementById("btnNext").removeAttribute("hidden");
-});
+// const btnPrev = document.getElementById("btnPrev");
+// btnPrev.addEventListener("click", function () {
+// 	btnPrev.hidden = true;
+// 	document.getElementById("btnNext").removeAttribute("hidden");
+// });
 
 const selectPenyakit = document.getElementById("selectPenyakit");
 selectPenyakit.addEventListener("change", function () {
 	const penyakit = selectPenyakit.value;
 	console.log(penyakit);
-	const btnNext = document.getElementById("btnNext");
+	const btnNext = document.getElementById("btnNextPrev");
 	if (penyakit != 0) {
 		if (btnNext.hasAttribute("disabled")) {
 			btnNext.removeAttribute("disabled");
@@ -72,6 +72,18 @@ window.addEventListener("scroll", function () {
 		document.getElementById("header").style.top = "-60px";
 	}
 	prevPos = currentPos;
+});
+const btnNextPrev = document.getElementById("btnNextPrev");
+btnNextPrev.addEventListener("click", function () {
+	let val = btnNextPrev.getAttribute("data-bs-slide");
+	console.log(val);
+	if (val == "next") {
+		btnNextPrev.setAttribute("data-bs-slide", "prev");
+		btnNextPrev.innerHTML = "Prev";
+	} else {
+		btnNextPrev.setAttribute("data-bs-slide", "next");
+		btnNextPrev.innerHTML = "Next";
+	}
 });
 
 $(".carousel").carousel({

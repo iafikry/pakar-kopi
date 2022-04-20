@@ -50,9 +50,14 @@
 	background-color: #42c2ff;
 	color: #fff;
 }
+.btn.btn-primer:hover {
+	color: #fff !important;
+	background-color: rgb(53, 176, 234);
+}
 
 .card-diagnosis {
 	border-radius: 25px !important;
+	background-color: #dff6ff;
 }
 .card-metode {
 	border-radius: 25px;
@@ -66,7 +71,7 @@
 }
 
 footer {
-	background-color: #68b0ab;
+	background-color: #084594;
 }
 
 header {
@@ -166,5 +171,8 @@ header {
 	}
 	#page4 {
 		min-height: 1000px;
+	}
+	.row-button-next-prev {
+		min-height: 200px;
 	}
 }
