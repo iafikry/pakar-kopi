@@ -1,3 +1,41 @@
+const iconKopi = document.getElementById("iconKopi");
+// iconKopi.addEventListener("mouseover", iconOver("biji"));
+iconKopi.addEventListener("mouseover", function () {
+	let iconKopi = document.getElementById("iconKopi");
+	iconKopi.style.transform = "translateY(-5%)";
+	document.getElementById("cdPenyakit").style.transform = "translateY(0.595%)";
+	let shadow = document.getElementById("sdwKopi");
+	shadow.style.width = "90px";
+});
+// iconKopi.addEventListener("mouseout", iconOut("biji"));
+iconKopi.addEventListener("mouseout", function () {
+	const iconKopi = document.getElementById("iconKopi");
+	iconKopi.style.removeProperty("transform");
+	document.getElementById("cdPenyakit").style.removeProperty("transform");
+	let shadow = document.getElementById("sdwKopi");
+	shadow.style.width = "100px";
+});
+
+// function iconOver(kode) {
+// 	console.log("icoon over: " + kode);
+// 	if (kode == "biji") {
+// 		let iconKopi = document.getElementById("iconKopi");
+// 		iconKopi.style.transform = "translateY(-5%)";
+// 		let shadow = document.getElementById("sdwKopi");
+// 		shadow.style.width = "90px";
+// 	}
+// }
+
+// function iconOut(kode) {
+// 	console.log("icoon out: " + kode);
+// 	if (kode == "biji") {
+// 		const iconKopi = document.getElementById("iconKopi");
+// 		iconKopi.removeAttribute("transform");
+// 		let shadow = document.getElementById("sdwKopi");
+// 		shadow.style.width = "100px";
+// 	}
+// }
+
 const linkGejala = document.getElementById("linkGejala");
 linkGejala.addEventListener("click", function () {
 	const tabPenyakit = document.getElementById("tabPenyakit");
@@ -56,7 +94,7 @@ window.addEventListener("scroll", function () {
 	if (prevPos > currentPos) {
 		document.getElementById("header").style.top = "0px";
 		if (prevPos > 54) {
-			document.getElementById("nav-menu").style.backgroundColor = "#42C2FF";
+			document.getElementById("nav-menu").style.backgroundColor = "#084594";
 			let txtLink = document.getElementsByClassName("nav-txt-link");
 			for (let i = 0; i < txtLink.length; i++) {
 				txtLink[i].style.color = "#FFFF";
@@ -65,7 +103,7 @@ window.addEventListener("scroll", function () {
 			document.getElementById("nav-menu").style.backgroundColor = "transparent";
 			let txtLink = document.getElementsByClassName("nav-txt-link");
 			for (let i = 0; i < txtLink.length; i++) {
-				txtLink[i].style.color = "#1e272e";
+				txtLink[i].style.color = "#fff";
 			}
 		}
 	} else {

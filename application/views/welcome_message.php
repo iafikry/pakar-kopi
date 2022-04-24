@@ -15,7 +15,7 @@
 	  <header id="header">
 		<nav class="navbar navbar-expand-lg navbar-light" id="nav-menu">
 			<div class="container">
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand text-light" href="#">
 					<img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
 				Bootstrap
 				</a>
@@ -23,11 +23,11 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav mx-auto text-base">
-						<a class="nav-txt-link txt-menu" id="menu-diagnosis" aria-current="page" href="#">Diagnosis</a>
-						<a class="nav-txt-link txt-menu" id="menu-informasi" href="#">Informasi
+					<div class="navbar-nav mx-auto text-light">
+						<a class="nav-txt-link text-light txt-menu" id="menu-diagnosis" aria-current="page" href="#">Diagnosis</a>
+						<a class="nav-txt-link text-light txt-menu" id="menu-informasi" href="#">Informasi
 						</a>
-						<a class="nav-txt-link txt-menu" id="menu-tentang" href="#">Tentang</a>
+						<a class="nav-txt-link text-light txt-menu" id="menu-tentang" href="#">Tentang</a>
 					</div>
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-6">
-						<div class="card border-0">
+						<div class="card billboard border-0 bg-transparent text-light position-relative">
 							<div class="card-body">
 								<h1 class="text-title">cari tahu penyakit apa yang sedang dialami  oleh tanaman kopimu</h1>
 								<p>ES Kopi merupakan sistem pakar (<i>expert system</i>) untuk mendiagnosis penyakit pada tanaman kopi robusta dan liberika</p>
@@ -46,58 +46,70 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-6">
-						<img src="<?= base_url('assets/img/unidraw-quiz.svg') ?>" alt="quiz" class="img-page1">
-					</div>
 				</div>
 			</div>
 		</section>
-		<section id="page2" class="d-flex align-items-center">
-			<div class="about pt-5">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg">
-							<h2 class="text-uppercase text-light text-center">es kopi</h2>
-						</div>
+		<section id="page2">
+			<div class="container pt-5">
+				<div class="row pt-5">
+					<div class="col-lg">
+						<h2 class="text-uppercase text-light text-center">es kopi</h2>
 					</div>
-					<div class="row">
-						<div class="col-lg">
-							<h3 class="text-light text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia itaque vitae veritatis aut vel sapiente, tenetur dolores aliquam! Nihil, nemo adipisci! Explicabo totam aut ex!</h3>
-						</div>
+				</div>
+				<div class="row pt-3">
+					<div class="col-lg">
+						<h3 class="text-light text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia itaque vitae veritatis aut vel sapiente, tenetur dolores aliquam! Nihil, nemo adipisci! Explicabo totam aut ex!</h3>
 					</div>
-					<div class="row d-flex flex-row align-items-center justify-content-evenly pt-5">
-						<div class="col-4">
-							<div class="card bg-transparent border-light text-light mx-auto card-info-sistem">
-								<img src="<?= base_url('assets/img/leaf.svg') ?>" alt="daun" class="pt-3" height="100">
-								<div class="card-body">
-									<h5 class="card-title">Lorem, ipsum dolor.</h5>
-									<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
-									<a href="#" class="text-blue-primer">Lihat selengkapnya</a>
-								</div>
+				</div>
+				<div class="row pt-3 justify-content-center">
+					<div class="col-2 d-flex justify-content-center">
+						<a href="#" class="btn btn-lg btn-primer">Mulai!</a>
+					</div>
+				</div>
+				<div class="row d-flex flex-row align-items-center justify-content-evenly position-relative z-2 div-info">
+					<div class="col-4">
+						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
+							<div class="icon d-flex flex-column justify-content-center">
+								<img src="<?= base_url('assets/img/coffee-beans.png') ?>" alt="biji kopi" id="iconKopi" class="mx-auto cd-img" width="150" style="position: relative;top:1rem;">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwKopi" class="mx-auto" width="100px">
+							</div>
+							<div class="card-body" id="cdPenyakit">
+								<h5 class="card-title">Lorem, ipsum dolor.</h5>
+								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
+								<a href="#" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
-						<div class="col-4">
-							<div class="card bg-transparent border-light text-light mx-auto card-info-sistem">
-								<img src="<?= base_url('assets/img/virus.svg') ?>" alt="virus" class="pt-3" height="100">
-								<div class="card-body">
-									<h5 class="card-title">Lorem, ipsum dolor.</h5>
-									<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
-									<a href="#page4" id="linkGejala" class="text-blue-primer">Lihat selengkapnya</a>
-								</div>
+					</div>
+					<div class="col-4">
+						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
+							<div class="icon d-flex flex-column justify-content-center">
+								<img src="<?= base_url('assets/img/virus.png') ?>" alt="biji kopi" class="mx-auto cd-img" width="150" style="position: relative;top:1rem;">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="mx-auto" width="100px">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">Lorem, ipsum dolor.</h5>
+								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
+								<a href="#page4" id="linkGejala" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
-						<div class="col-4">
-							<div class="card bg-transparent border-light text-light mx-auto card-info-sistem">
-								<img src="<?= base_url('assets/img/brainstorm.svg') ?>" alt="brainstorm" class="pt-3" height="100">
-								<div class="card-body">
-									<h5 class="card-title">Lorem, ipsum dolor.</h5>
-									<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
-									<a href="#" class="text-blue-primer">Lihat selengkapnya</a>
-								</div>
+					</div>
+					<div class="col-4">
+						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
+							<div class="icon d-flex flex-column justify-content-center">
+								<img src="<?= base_url('assets/img/brainstorming.png') ?>" alt="biji kopi" class="mx-auto cd-img" width="150" style="position: relative;top:1rem;">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="mx-auto" width="100px">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">Lorem, ipsum dolor.</h5>
+								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
+								<a href="#" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="position-relative w-100 bg-tp z-1">
+				<div class="bg-white w-100 backdrop"></div>
 			</div>
 		</section>
 		<section id="page3" class="pt-5 pb-5">

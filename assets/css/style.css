@@ -11,16 +11,15 @@
 	padding: 0;
 	font-family: "Poppins", sans-serif !important;
 }
-.about {
-	position: relative;
-	z-index: 1;
-	width: 100%;
-}
 .txt-menu {
 	position: relative;
 	display: inline-block;
 }
-
+.backdrop {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
 .badge-pill {
 	display: inline-block;
 	padding: 1rem 1.5rem;
@@ -43,14 +42,23 @@
 	border: 1px solid #42c2ff;
 	color: #fff !important;
 }
+.billboard {
+	z-index: 1;
+}
 .bg-primary-green {
 	background-color: #b8fff9;
 }
-
+.bg-tp {
+	height: 284px;
+}
 .bg-base-color {
 	background-color: #effffd;
 }
-
+.bg-white {
+	background-color: #ffff !important;
+	opacity: 1 !important;
+	--bs-bg-opacity: 1;
+}
 .btn-primer {
 	background-color: #42c2ff;
 	color: #fff;
@@ -70,15 +78,12 @@
 	min-width: 20rem;
 	min-height: 17rem;
 }
-
 .carousel-item {
 	min-height: 200px;
 }
-
 footer {
 	background-color: #084594;
 }
-
 header {
 	z-index: 5;
 	position: fixed;
@@ -91,23 +96,29 @@ header {
 }
 .navbar {
 	transition: all 0.5s;
-	color: #1e272e;
+	color: #fff;
 }
 .nav-txt-link {
 	display: block;
 	padding: 0.5rem 1rem;
 	text-decoration: none;
-	color: #1e272e;
+	color: #fff;
+}
+#page1::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.7);
+	/* background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.5),
+		rgba(8, 69, 148, 0.5)
+	); */
 }
 #page2 {
-	background-image: url("../img/rodrigo-flores-unsplash.jpg");
-	background-attachment: fixed;
+	background-color: #1e272e;
+	/* background-image: url("../img/card-2.svg");
 	background-repeat: no-repeat;
-	position: relative;
-}
-#page2::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.78);
+	background-size: contain;
+	background-position: bottom; */
 }
 .tab-pane {
 	min-height: 300px;
@@ -122,20 +133,45 @@ header {
 	font-size: 2rem;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #1e272e !important;
+	color: #fff !important;
 }
-
+.z-0 {
+	z-index: 0;
+}
+.z-1 {
+	z-index: 1;
+}
+.z-2 {
+	z-index: 2;
+}
+.z-3 {
+	z-index: 3;
+}
 /* TAMPILAN DESKTOP */
 @media (min-width: 992px) {
+	.backdrop {
+		height: 268%;
+		/* bottom: -838px; */
+		bottom: 0;
+		border-top-left-radius: 96px;
+		border-top-right-radius: 96px;
+	}
+	.bg-tp {
+		height: 100px;
+	}
 	.card-info-sistem {
 		width: 15rem;
 		border-radius: 25px !important;
+		top: 1.5rem;
 	}
 	.card-penyakit {
 		width: 23rem;
 	}
 	.card-penyakit > .card-body {
 		padding-top: 7rem !important;
+	}
+	.div-info {
+		top: 3rem;
 	}
 	footer {
 		min-height: 250px;
@@ -153,23 +189,24 @@ header {
 		border-radius: 25px;
 	}
 	#page1 {
-		background-image: url("../img/wave-1.svg"), url("../img/wave-2.svg");
-		background-position: right top, left bottom;
-		background-repeat: no-repeat, no-repeat;
-		height: 740px;
-	}
-	#page2 {
+		background-image: url("../img/rodrigo-flores-unsplash.jpg");
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		position: relative;
 		background-size: cover;
 		background-position: center;
-		height: 650px;
+		height: 740px;
 	}
-	#page2::after {
+	#page1::after {
 		display: block;
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		bottom: 0px;
+		top: 0px;
 		overflow: hidden;
+	}
+	#page2 {
+		max-height: 850px;
 	}
 	#page3 {
 		min-height: 700px;
@@ -188,7 +225,7 @@ header {
 		height: 2px;
 		bottom: 0;
 		left: 0;
-		background-color: #000;
+		background-color: #fff;
 		transform-origin: bottom right;
 		transition: transform 0.25s ease-out;
 	}
