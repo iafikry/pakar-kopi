@@ -63,7 +63,8 @@
 	--bs-bg-opacity: 1;
 }
 .btn-primer {
-	background-color: #42c2ff;
+	/* background-color: #42c2ff; */
+	background-color: #2666cf;
 	color: #fff;
 }
 .btn.btn-primer:hover {
@@ -137,8 +138,8 @@ header {
 	color: #42c2ff !important;
 }
 .text-title {
-	font-size: 2rem;
-	font-weight: bold;
+	font-size: 3.5rem;
+	font-weight: 800;
 	text-transform: uppercase;
 	color: #fff !important;
 }

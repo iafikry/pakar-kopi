@@ -1,3 +1,17 @@
+const iconVirus = document.getElementById("iconVirus");
+iconVirus.addEventListener("mouseover", function () {
+	iconVirus.style.transform = "translateY(-5%)";
+	document.getElementById("cdGejala").style.transform = "translateY(0.59%)";
+	let shadow = document.getElementById("sdwVirus");
+	shadow.style.width = "90px";
+});
+iconVirus.addEventListener("mouseout", function () {
+	iconVirus.style.removeProperty("transform");
+	document.getElementById("cdGejala").style.removeProperty("transform");
+	let shadow = document.getElementById("sdwVirus");
+	shadow.style.removeProperty("width");
+});
+
 const iconKopi = document.getElementById("iconKopi");
 iconKopi.addEventListener("mouseover", function () {
 	iconKopi.style.transform = "translateY(-5%)";
@@ -5,11 +19,24 @@ iconKopi.addEventListener("mouseover", function () {
 	let shadow = document.getElementById("sdwKopi");
 	shadow.style.width = "90px";
 });
-
 iconKopi.addEventListener("mouseout", function () {
 	iconKopi.style.removeProperty("transform");
 	document.getElementById("cdPenyakit").style.removeProperty("transform");
 	let shadow = document.getElementById("sdwKopi");
+	shadow.style.removeProperty("width");
+});
+
+const iconBrainstorm = document.getElementById("iconBrainstorm");
+iconBrainstorm.addEventListener("mouseover", function () {
+	iconBrainstorm.style.transform = "translateY(-5%)";
+	document.getElementById("cdMetode").style.transform = "translateY(0.59%)";
+	let shadow = document.getElementById("sdwBrainstorm");
+	shadow.style.width = "90px";
+});
+iconBrainstorm.addEventListener("mouseout", function () {
+	iconBrainstorm.style.removeProperty("transform");
+	document.getElementById("cdMetode").style.removeProperty("transform");
+	let shadow = document.getElementById("sdwBrainstorm");
 	shadow.style.removeProperty("width");
 });
 

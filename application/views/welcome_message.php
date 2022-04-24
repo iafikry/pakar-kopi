@@ -37,12 +37,11 @@
 		<section id="page1" class="d-flex flex-row align-items-center">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-6">
+					<div class="col-7">
 						<div class="card billboard border-0 bg-transparent text-light position-relative">
 							<div class="card-body">
 								<h1 class="text-title">cari tahu penyakit apa yang sedang dialami  oleh tanaman kopimu</h1>
-								<p>ES Kopi merupakan sistem pakar (<i>expert system</i>) untuk mendiagnosis penyakit pada tanaman kopi robusta dan liberika</p>
-								<a href="#page3" class="btn btn-primer">Mulai</a>
+								<h4 class="fw-normal">ES Kopi merupakan sistem pakar (<i>expert system</i>) untuk mendiagnosis penyakit pada tanaman kopi robusta dan liberika</h4>
 							</div>
 						</div>
 					</div>
@@ -83,10 +82,10 @@
 					<div class="col-4">
 						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
 							<div class="icon d-flex flex-column justify-content-center">
-								<img src="<?= base_url('assets/img/virus.png') ?>" alt="biji kopi" class="mx-auto cd-img position-relative" width="150">
-								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="bayangan mx-auto" width="100px">
+								<img src="<?= base_url('assets/img/virus.png') ?>" alt="virus" id="iconVirus" class="mx-auto cd-img position-relative" width="150">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwVirus" class="bayangan mx-auto" width="100px">
 							</div>
-							<div class="card-body">
+							<div class="card-body" id="cdGejala">
 								<h5 class="card-title">Lorem, ipsum dolor.</h5>
 								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
 								<a href="#page4" id="linkGejala" class="text-base">Lihat selengkapnya</a>
@@ -96,10 +95,10 @@
 					<div class="col-4">
 						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
 							<div class="icon d-flex flex-column justify-content-center">
-								<img src="<?= base_url('assets/img/brainstorming.png') ?>" alt="biji kopi" class="mx-auto cd-img position-relative" width="150">
-								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="bayangan mx-auto" width="100px">
+								<img src="<?= base_url('assets/img/brainstorming.png') ?>" alt="brainstorming" id="iconBrainstorm" class="mx-auto cd-img position-relative" width="150">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwBrainstorm" class="bayangan mx-auto" width="100px">
 							</div>
-							<div class="card-body">
+							<div class="card-body" id="cdMetode">
 								<h5 class="card-title">Lorem, ipsum dolor.</h5>
 								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
 								<a href="#" class="text-base">Lihat selengkapnya</a>
@@ -166,7 +165,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="page4">
+		<section id="page4" style="background-color: #F5F2E7;">
 			<div class="container">
 				<h4 class="text-uppercase">informasi</h4>
 				<hr>
@@ -344,5 +343,7 @@
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="<?= base_url('assets/js/myScript.js') ?>"></script>
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
