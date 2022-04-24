@@ -70,8 +70,8 @@
 					<div class="col-4">
 						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
 							<div class="icon d-flex flex-column justify-content-center">
-								<img src="<?= base_url('assets/img/coffee-beans.png') ?>" alt="biji kopi" id="iconKopi" class="mx-auto cd-img" width="150" style="position: relative;top:1rem;">
-								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwKopi" class="mx-auto" width="100px">
+								<img src="<?= base_url('assets/img/coffee-beans.png') ?>" alt="biji kopi" id="iconKopi" class="mx-auto cd-img position-relative position-relative" width="150">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" id="sdwKopi" alt="bayangan" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body" id="cdPenyakit">
 								<h5 class="card-title">Lorem, ipsum dolor.</h5>
@@ -83,8 +83,8 @@
 					<div class="col-4">
 						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
 							<div class="icon d-flex flex-column justify-content-center">
-								<img src="<?= base_url('assets/img/virus.png') ?>" alt="biji kopi" class="mx-auto cd-img" width="150" style="position: relative;top:1rem;">
-								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="mx-auto" width="100px">
+								<img src="<?= base_url('assets/img/virus.png') ?>" alt="biji kopi" class="mx-auto cd-img position-relative" width="150">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body">
 								<h5 class="card-title">Lorem, ipsum dolor.</h5>
@@ -96,8 +96,8 @@
 					<div class="col-4">
 						<div class="card bg-transparent border-0 text-base mx-auto card-info-sistem">
 							<div class="icon d-flex flex-column justify-content-center">
-								<img src="<?= base_url('assets/img/brainstorming.png') ?>" alt="biji kopi" class="mx-auto cd-img" width="150" style="position: relative;top:1rem;">
-								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="mx-auto" width="100px">
+								<img src="<?= base_url('assets/img/brainstorming.png') ?>" alt="biji kopi" class="mx-auto cd-img position-relative" width="150">
+								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body">
 								<h5 class="card-title">Lorem, ipsum dolor.</h5>

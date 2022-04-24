@@ -42,6 +42,9 @@
 	border: 1px solid #42c2ff;
 	color: #fff !important;
 }
+/* .bayangan {
+	transition: width 0.3s ease-in-out;
+} */
 .billboard {
 	z-index: 1;
 }
@@ -80,6 +83,9 @@
 }
 .carousel-item {
 	min-height: 200px;
+}
+.cd-img {
+	transition: transform 0.3s ease-out;
 }
 footer {
 	background-color: #084594;
@@ -120,6 +126,7 @@ header {
 	background-size: contain;
 	background-position: bottom; */
 }
+
 .tab-pane {
 	min-height: 300px;
 }
@@ -169,6 +176,9 @@ header {
 	}
 	.card-penyakit > .card-body {
 		padding-top: 7rem !important;
+	}
+	.cd-img {
+		top: 1rem;
 	}
 	.div-info {
 		top: 3rem;

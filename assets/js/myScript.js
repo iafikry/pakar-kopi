@@ -1,40 +1,17 @@
 const iconKopi = document.getElementById("iconKopi");
-// iconKopi.addEventListener("mouseover", iconOver("biji"));
 iconKopi.addEventListener("mouseover", function () {
-	let iconKopi = document.getElementById("iconKopi");
 	iconKopi.style.transform = "translateY(-5%)";
-	document.getElementById("cdPenyakit").style.transform = "translateY(0.595%)";
+	document.getElementById("cdPenyakit").style.transform = "translateY(0.59%)";
 	let shadow = document.getElementById("sdwKopi");
 	shadow.style.width = "90px";
 });
-// iconKopi.addEventListener("mouseout", iconOut("biji"));
+
 iconKopi.addEventListener("mouseout", function () {
-	const iconKopi = document.getElementById("iconKopi");
 	iconKopi.style.removeProperty("transform");
 	document.getElementById("cdPenyakit").style.removeProperty("transform");
 	let shadow = document.getElementById("sdwKopi");
-	shadow.style.width = "100px";
+	shadow.style.removeProperty("width");
 });
-
-// function iconOver(kode) {
-// 	console.log("icoon over: " + kode);
-// 	if (kode == "biji") {
-// 		let iconKopi = document.getElementById("iconKopi");
-// 		iconKopi.style.transform = "translateY(-5%)";
-// 		let shadow = document.getElementById("sdwKopi");
-// 		shadow.style.width = "90px";
-// 	}
-// }
-
-// function iconOut(kode) {
-// 	console.log("icoon out: " + kode);
-// 	if (kode == "biji") {
-// 		const iconKopi = document.getElementById("iconKopi");
-// 		iconKopi.removeAttribute("transform");
-// 		let shadow = document.getElementById("sdwKopi");
-// 		shadow.style.width = "100px";
-// 	}
-// }
 
 const linkGejala = document.getElementById("linkGejala");
 linkGejala.addEventListener("click", function () {
