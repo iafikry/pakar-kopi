@@ -57,6 +57,25 @@
 .bg-base-color {
 	background-color: #effffd;
 }
+.bg-page4 {
+	background-image: url("../img/clint-mckoy-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	border-bottom-left-radius: 96px;
+	border-bottom-right-radius: 96px;
+}
+.bg-page4::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.6);
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	border-bottom-left-radius: 96px;
+	border-bottom-right-radius: 96px;
+}
 .bg-white {
 	background-color: #ffff !important;
 	opacity: 1 !important;
@@ -87,6 +106,12 @@
 }
 .cd-img {
 	transition: transform 0.3s ease-out;
+}
+.content-page4 {
+	position: relative;
+	border-radius: 50px;
+	bottom: 5rem;
+	padding: 2rem;
 }
 footer {
 	background-color: #084594;
@@ -167,6 +192,16 @@ header {
 	.bg-tp {
 		height: 100px;
 	}
+	.bg-page4 {
+		background-size: cover;
+		min-height: 400px;
+		border-bottom-left-radius: 96px;
+		border-bottom-right-radius: 96px;
+	}
+	.bg-page4::after {
+		border-bottom-left-radius: 96px;
+		border-bottom-right-radius: 96px;
+	}
 	.card-info-sistem {
 		width: 15rem;
 		border-radius: 25px !important;
@@ -190,7 +225,7 @@ header {
 	.number-penyakit {
 		font-size: 9rem;
 		position: absolute;
-		z-index: -1;
+		z-index: 0;
 		color: #1e272e;
 		opacity: 20%;
 		font-weight: 800;
@@ -223,7 +258,8 @@ header {
 		min-height: 700px;
 	}
 	#page4 {
-		min-height: 1000px;
+		min-height: 1300px;
+		background-color: #f5f2e7;
 	}
 	.row-button-next-prev {
 		min-height: 200px;

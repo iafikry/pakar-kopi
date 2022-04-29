@@ -165,10 +165,17 @@
 				</div>
 			</div>
 		</section>
-		<section id="page4" style="background-color: #F5F2E7;">
-			<div class="container">
-				<h4 class="text-uppercase">informasi</h4>
-				<hr>
+		<section id="page4">
+			<div class="bg-page4 position-relative z-0 d-flex align-items-center">
+				<div class="container">
+					<div class="row align-items-center justify-content-center text-center">
+						<div class="col-8">
+							<h1 class="text-light fw-bold position-relative z-1">Informasi yang perlu kamu ketahui tentang sistem ini</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-page4 container bg-white">
 				<div class="row justify-content-center">
 					<div class="col-4">
 						<!-- Tabs -->
