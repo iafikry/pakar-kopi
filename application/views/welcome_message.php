@@ -16,8 +16,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light" id="nav-menu">
 			<div class="container">
 				<a class="navbar-brand text-light" href="#">
-					<img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-				Bootstrap
+					<img src="<?= base_url('assets/img/logo fill - white.svg') ?>" alt="logo" height="80" class="d-inline-block" style="fill: #fffff;">
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -52,12 +51,12 @@
 			<div class="container pt-5">
 				<div class="row pt-5">
 					<div class="col-lg">
-						<h2 class="text-uppercase text-light text-center">es kopi</h2>
+						<h2 class="text-uppercase text-base text-center">es kopi</h2>
 					</div>
 				</div>
 				<div class="row pt-3">
 					<div class="col-lg">
-						<h3 class="text-light text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia itaque vitae veritatis aut vel sapiente, tenetur dolores aliquam! Nihil, nemo adipisci! Explicabo totam aut ex!</h3>
+						<h3 class="text-base text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia itaque vitae veritatis aut vel sapiente, tenetur dolores aliquam! Nihil, nemo adipisci! Explicabo totam aut ex!</h3>
 					</div>
 				</div>
 				<div class="row pt-3 justify-content-center">

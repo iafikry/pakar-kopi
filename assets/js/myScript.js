@@ -111,7 +111,7 @@ window.addEventListener("scroll", function () {
 			}
 		}
 	} else {
-		document.getElementById("header").style.top = "-60px";
+		document.getElementById("header").style.top = "-110px";
 	}
 	prevPos = currentPos;
 });

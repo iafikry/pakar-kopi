@@ -63,8 +63,8 @@
       </div>
     </nav>
 
-    <main class="col-md-9 col-lg-10">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap px-md-4 pt-3 pb-2 mb-3 border-bottom bg-white head-page">
+    <main class="col-md-9 col-lg-10 bg-light">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap px-md-4 pt-3 pb-2 mb-3 bg-white head-page">
         <h1 class="h2">Dashboard</h1>
         <div class="mb-2 mb-md-0">
           <div class="btn-group me-2">
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="main-content bg-light">
+      <div class="main-content card bg-white">
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
