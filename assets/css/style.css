@@ -54,6 +54,10 @@
 .bg-blue-primary {
 	background-color: #084594;
 }
+.bg-blue-2 {
+	background-color: #2666cf;
+	color: #ffff;
+}
 .bg-primary-green {
 	background-color: #b8fff9;
 }
@@ -87,6 +91,9 @@
 	opacity: 1 !important;
 	--bs-bg-opacity: 1;
 }
+.breadcrumb {
+	--bs-breadcrumb-divider: ">";
+}
 .btn-primer {
 	/* background-color: #42c2ff; */
 	background-color: #2666cf;
@@ -96,7 +103,21 @@
 	color: #fff !important;
 	background-color: rgb(53, 176, 234);
 }
-
+.card-content {
+	border-radius: 25px;
+	width: 18rem;
+}
+.card-body-dashboard {
+	bottom: 3rem;
+}
+.card-header-2 {
+	border-radius: 25px;
+	background-color: #f5f2e7;
+	padding: 10px;
+	width: fit-content;
+	left: 1rem;
+	bottom: 3rem;
+}
 .card-diagnosis {
 	border-radius: 25px !important;
 	background-color: #dff6ff;
@@ -114,7 +135,7 @@
 	transition: transform 0.3s ease-out;
 }
 .content {
-	bottom: 3rem;
+	bottom: 6rem;
 }
 .content-page4 {
 	position: relative;
@@ -133,7 +154,7 @@ header {
 	top: 0px;
 }
 .header-content {
-	min-height: 200px;
+	min-height: 300px;
 }
 .link-dark {
 	color: #1e272e !important;
@@ -295,6 +316,7 @@ header {
 	}
 	.row-breadcrumb {
 		padding-top: 4.4rem !important;
+		font-size: 0.8rem;
 	}
 	.row-button-next-prev {
 		min-height: 200px;
