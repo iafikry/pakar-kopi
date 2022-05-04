@@ -19,7 +19,7 @@
 		</div>
 		<section class="content container position-relative z-1">
 			<div class="row justify-content-evenly">
-				<div class="card border-0 card-content bg-blue-2">
+				<div class="card border-0 card-content bg-blue-2" style="width: 18rem;">
 					<div class="card-header-2 position-relative z-2">
 						<img src="<?= base_url('assets/img/coffee-beans.png') ?>" alt="biji kopi" width="88">
 					</div>
@@ -28,7 +28,7 @@
 						<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit magni odit sapiente cupiditates.</p>
 					</div>
 				</div>
-				<div class="card border-0 card-content bg-blue-2">
+				<div class="card border-0 card-content bg-blue-2" style="width: 18rem;">
 					<div class="card-header-2 position-relative z-2">
 						<img src="<?= base_url('assets/img/virus.png')  ?>" alt="biji kopi" width="88">
 					</div>
@@ -37,7 +37,7 @@
 						<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit magni odit sapiente cupiditates.</p>
 					</div>
 				</div>
-				<div class="card border-0 card-content bg-blue-2">
+				<div class="card border-0 card-content bg-blue-2" style="width: 18rem;">
 					<div class="card-header-2 position-relative z-2">
 						<img src="<?= base_url('assets/img/brainstorming.png') ?>" alt="biji kopi" width="88">
 					</div>

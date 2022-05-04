@@ -127,6 +127,16 @@ btnNextPrev.addEventListener("click", function () {
 		btnNextPrev.innerHTML = "Next";
 	}
 });
+const menuGejala = document.getElementById("menuGejala");
+menuGejala.addEventListener("click", function () {
+	let link = document.getElementsByClassName("link-dark");
+	for (let i = 0; i < link.length; i++) {
+		if (link.classList.contains("active")) {
+			link.classList.remove("active");
+		}
+	}
+	menuGejala.classList.add("active");
+});
 
 $(".carousel").carousel({
 	interval: false,

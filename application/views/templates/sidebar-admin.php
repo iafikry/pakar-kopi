@@ -9,31 +9,31 @@
 		</div>
 		<ul class="nav nav-pills flex-column mb-auto p-3">
 			<li class="nav-item">
-				<a class="nav-link active link-dark" aria-current="page" href="<?= base_url('admin') ?>">
+				<a class="nav-link active link-dark" id="menuDashboard" aria-current="page" href="<?= base_url('admin') ?>">
 				<i class="bi bi-house-fill"></i>
 				Dashboard
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" href="<?= base_url('admin/gejala') ?>">					
+				<a class="nav-link link-dark" id="menuGejala" href="<?= base_url('admin/gejala') ?>">					
 				<i class="bi bi-shield-check"></i>
 				Gejala
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" href="#">
+				<a class="nav-link link-dark" id="menuPenyakit" href="#">
 				<i class="bi bi-heart-pulse"></i>
 				Penyakit
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" href="#">
+				<a class="nav-link link-dark" id="menuRule" href="#">
 				<i class="bi bi-sliders"></i>
 				Aturan
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" href="#">
+				<a class="nav-link link-dark" id="menuUser" href="#">
 				<i class="bi bi-person"></i>
 				Pengguna
 				</a>
