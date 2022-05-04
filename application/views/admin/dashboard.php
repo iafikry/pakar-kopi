@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<title>Dashboard</title>
 </head>
-<body>
+<body id="b-dashboard">
 	<!-- <header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
@@ -38,8 +38,8 @@
 	</header> -->
 
 	<div class="row">
-		<div class="col-3 position-relative">
-			<aside class="position-fixed sidebar border-end d-flex flex-column">
+		<div class="col-2 position-relative z-3">
+			<aside class="position-fixed sidebar border-end d-flex flex-column bg-white" >
 				<div class="w-100 bg-white">
 					<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none py-1 px-3 border-bottom">
 						<img src="<?= base_url('assets/img/logo fill-blue.svg') ?>" alt="logo" height="80">
@@ -90,16 +90,26 @@
 				</div>
 			</aside>
 		</div>
-		<div class="col-9">
-			<main class="bg-light">
-				<div class="bg-white w-100 position-relative z-0">
-					<div class="row container p-3">
+		<div class="col-10">
+			<main class="bg-light main-content">
+				<div class="bg-white w-100 position-relative z-0 header-content">
+					<div class="row container row-breadcrumb">
+						<div class="col-12">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb mb-auto">
+									<li class="breadcrumb-item"><a href="#">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Library</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<div class="row container">
 						<div class="col-4">
 							<h2 class="text-base">Dashboard</h2>
 						</div>
 					</div>
 				</div>
-				<section class="content position-relative z-1">
+				<section class="content container position-relative z-1">
 					<div class="row">
 						<div class="col-12 col-md-12">
 							<div class="card w-100 bg-white">

@@ -15,6 +15,9 @@
 	position: relative;
 	display: inline-block;
 }
+#b-dashboard {
+	overflow-x: hidden;
+}
 .backdrop {
 	position: absolute;
 	left: 0px;
@@ -110,6 +113,9 @@
 .cd-img {
 	transition: transform 0.3s ease-out;
 }
+.content {
+	bottom: 3rem;
+}
 .content-page4 {
 	position: relative;
 	border-radius: 50px;
@@ -126,11 +132,17 @@ header {
 	transition: all 0.5s;
 	top: 0px;
 }
+.header-content {
+	min-height: 200px;
+}
 .link-dark {
 	color: #1e272e !important;
 }
 .list-continuing {
 	counter-increment: section !important;
+}
+.main-content {
+	overflow-x: hidden !important;
 }
 .navbar {
 	transition: all 0.5s;
@@ -167,7 +179,7 @@ header {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	width: 280px;
+	width: 260px;
 }
 
 .tab-pane {
@@ -251,6 +263,9 @@ header {
 		height: 315px;
 		border-radius: 25px;
 	}
+	.main-content {
+		min-height: 700px;
+	}
 	#page1 {
 		background-image: url("../img/rodrigo-flores-unsplash.jpg");
 		background-attachment: fixed;
@@ -277,6 +292,9 @@ header {
 	#page4 {
 		min-height: 1300px;
 		background-color: #f5f2e7;
+	}
+	.row-breadcrumb {
+		padding-top: 4.4rem !important;
 	}
 	.row-button-next-prev {
 		min-height: 200px;
