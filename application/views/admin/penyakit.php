@@ -1,9 +1,3 @@
-<!-- alert flashdata -->
-<?php if($this->session->flashdata('message')): ?>
-	 <div class="flash-data" data-flash="<?= $this->session->flashdata('message');?>"></div>
-<?php unset($_SESSION['message']); endif; ?>
-
-
 <div class="col-10">
 	<main class="bg-light main-content">
 		<div class="bg-white w-100 position-relative z-0 header-content">
@@ -28,7 +22,7 @@
 		<section class="content container position-relative z-1">
 			<div class="row">
 				<div class="col-12 col-md-12">
-					<div class="card w-100 bg-white card-content">
+					<div class="card w-100 bg-white card-content shadow">
 						<div class="card-body">
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit magni odit sapiente cupiditate explicabo est recusandae alias sunt? Fugit molestias dignissimos numquam explicabo qui odio fuga quis. Incidunt, possimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, quibusdam.</p>
 						</div>

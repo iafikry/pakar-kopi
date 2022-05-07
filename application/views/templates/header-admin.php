@@ -13,4 +13,8 @@
 	<title>Dashboard</title>
 </head>
 <body id="b-dashboard">
+	<!-- alert flashdata -->
+	<?php if($this->session->flashdata('message')): ?>
+		 <div class="flash-data" data-flash="<?= $this->session->flashdata('message');?>"></div>
+	<?php unset($_SESSION['message']); endif; ?>
 	<div class="row">
