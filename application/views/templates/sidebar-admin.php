@@ -21,7 +21,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" id="menuPenyakit" href="#">
+				<a class="nav-link link-dark" id="menuPenyakit" href="<?= base_url('admin/penyakit') ?>">
 				<i class="bi bi-heart-pulse"></i>
 				Penyakit
 				</a>

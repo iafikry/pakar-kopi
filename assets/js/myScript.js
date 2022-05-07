@@ -1,3 +1,20 @@
+const menuGejala = document.getElementById("menuGejala");
+menuGejala.addEventListener("click", function () {
+	console.log("tambah class active di gejala");
+	let link = document.getElementsByClassName("link-dark");
+	for (let i = 0; i < link.length; i++) {
+		if (link.classList.contains("active")) {
+			link.classList.remove("active");
+		}
+	}
+	menuGejala.classList.add("active");
+});
+
+//tooltip
+$(function () {
+	$('[data-bs-toggle="tooltip"]').tooltip();
+});
+
 const iconVirus = document.getElementById("iconVirus");
 iconVirus.addEventListener("mouseover", function () {
 	iconVirus.style.transform = "translateY(-5%)";
@@ -126,16 +143,6 @@ btnNextPrev.addEventListener("click", function () {
 		btnNextPrev.setAttribute("data-bs-slide", "next");
 		btnNextPrev.innerHTML = "Next";
 	}
-});
-const menuGejala = document.getElementById("menuGejala");
-menuGejala.addEventListener("click", function () {
-	let link = document.getElementsByClassName("link-dark");
-	for (let i = 0; i < link.length; i++) {
-		if (link.classList.contains("active")) {
-			link.classList.remove("active");
-		}
-	}
-	menuGejala.classList.add("active");
 });
 
 $(".carousel").carousel({
