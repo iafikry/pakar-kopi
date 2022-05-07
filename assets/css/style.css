@@ -98,10 +98,11 @@
 	/* background-color: #42c2ff; */
 	background-color: #2666cf;
 	color: #fff;
+	border-radius: 0.7rem !important;
 }
 .btn.btn-primer:hover {
 	color: #fff !important;
-	background-color: rgb(53, 176, 234);
+	background-color: #084594;
 }
 .card-content {
 	border-radius: 25px;
@@ -141,6 +142,13 @@
 	border-radius: 50px;
 	bottom: 5rem;
 	padding: 2rem;
+}
+.form-control:focus {
+	color: #1e272e !important;
+	background-color: #fff;
+	border-color: #084594;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgba(8, 69, 148, 0.25) !important;
 }
 footer {
 	background-color: #084594;

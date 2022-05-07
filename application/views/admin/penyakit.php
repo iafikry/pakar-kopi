@@ -1,3 +1,8 @@
+<!-- alert flashdata -->
+<?php if($this->session->flashdata('message')): ?>
+	 <div class="flash-data" data-flash="<?= $this->session->flashdata('message');?>"></div>
+<?php unset($_SESSION['message']); endif; ?>
+
 
 <div class="col-10">
 	<main class="bg-light main-content">
@@ -15,8 +20,8 @@
 				<div class="col-4">
 					<h2 class="text-base">Penyakit</h2>
 				</div>
-				<div class="col-4 d-flex justify-content-end">
-					<a href="" class="btn align-content-center btn-primer" title="Tambah penyakit" data-bs-toggle="tooltip" data-bs-placement="top"><span class="bi bi-plus-circle"></span></a>
+				<div class="col-4 d-flex justify-content-end align-items-center">
+					<a href="<?= base_url('penyakit/tambahDataPenyakit') ?>" class="btn align-content-center btn-primer" title="Tambah penyakit" data-bs-toggle="tooltip" data-bs-placement="top">Tambah data</a>
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,33 @@
+let prevPos = window.pageYOffset;
+window.addEventListener("scroll", function () {
+	let currentPos = window.pageYOffset;
+	// console.log("Prev Pos");
+	// console.log(prevPos);
+	// console.log("===================");
+	// console.log("current position");
+	// console.log(currentPos);
+	// console.log("===================");
+	if (prevPos > currentPos) {
+		document.getElementById("header").style.top = "0px";
+		if (prevPos > 54) {
+			document.getElementById("nav-menu").style.backgroundColor = "#084594";
+			let txtLink = document.getElementsByClassName("nav-txt-link");
+			for (let i = 0; i < txtLink.length; i++) {
+				txtLink[i].style.color = "#FFFF";
+			}
+		} else {
+			document.getElementById("nav-menu").style.backgroundColor = "transparent";
+			let txtLink = document.getElementsByClassName("nav-txt-link");
+			for (let i = 0; i < txtLink.length; i++) {
+				txtLink[i].style.color = "#fff";
+			}
+		}
+	} else {
+		document.getElementById("header").style.top = "-110px";
+	}
+	prevPos = currentPos;
+});
+
 const menuGejala = document.getElementById("menuGejala");
 menuGejala.addEventListener("click", function () {
 	console.log("tambah class active di gejala");
@@ -11,9 +41,9 @@ menuGejala.addEventListener("click", function () {
 });
 
 //tooltip
-$(function () {
-	$('[data-bs-toggle="tooltip"]').tooltip();
-});
+// $(function () {
+// 	$('[data-bs-toggle="tooltip"]').tooltip();
+// });
 
 const iconVirus = document.getElementById("iconVirus");
 iconVirus.addEventListener("mouseover", function () {
@@ -103,35 +133,6 @@ selectPenyakit.addEventListener("change", function () {
 	}
 });
 
-let prevPos = window.pageYOffset;
-window.addEventListener("scroll", function () {
-	let currentPos = window.pageYOffset;
-	// console.log("Prev Pos");
-	// console.log(prevPos);
-	// console.log("===================");
-	// console.log("current position");
-	// console.log(currentPos);
-	// console.log("===================");
-	if (prevPos > currentPos) {
-		document.getElementById("header").style.top = "0px";
-		if (prevPos > 54) {
-			document.getElementById("nav-menu").style.backgroundColor = "#084594";
-			let txtLink = document.getElementsByClassName("nav-txt-link");
-			for (let i = 0; i < txtLink.length; i++) {
-				txtLink[i].style.color = "#FFFF";
-			}
-		} else {
-			document.getElementById("nav-menu").style.backgroundColor = "transparent";
-			let txtLink = document.getElementsByClassName("nav-txt-link");
-			for (let i = 0; i < txtLink.length; i++) {
-				txtLink[i].style.color = "#fff";
-			}
-		}
-	} else {
-		document.getElementById("header").style.top = "-110px";
-	}
-	prevPos = currentPos;
-});
 const btnNextPrev = document.getElementById("btnNextPrev");
 btnNextPrev.addEventListener("click", function () {
 	let val = btnNextPrev.getAttribute("data-bs-slide");
