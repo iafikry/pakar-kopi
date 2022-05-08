@@ -41,9 +41,9 @@ menuGejala.addEventListener("click", function () {
 });
 
 //tooltip
-// $(function () {
-// 	$('[data-bs-toggle="tooltip"]').tooltip();
-// });
+$(function () {
+	$('[data-bs-toggle="tooltip"]').tooltip();
+});
 
 const iconVirus = document.getElementById("iconVirus");
 iconVirus.addEventListener("mouseover", function () {

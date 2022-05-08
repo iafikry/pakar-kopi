@@ -24,7 +24,39 @@
 				<div class="col-12 col-md-12">
 					<div class="card w-100 bg-white card-content shadow">
 						<div class="card-body">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit magni odit sapiente cupiditate explicabo est recusandae alias sunt? Fugit molestias dignissimos numquam explicabo qui odio fuga quis. Incidunt, possimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, quibusdam.</p>
+							<div class="table-responsive">
+								<table class="table table-striped text-base">
+									<thead>
+										<tr>
+											<th scope="col">Kode penyakit</th>
+											<th scope="col">Nama penyakt</th>
+											<th scope="col">Keterangan</th>
+											<th scope="col">Opsi</th>
+										</tr>
+									</thead>
+									<tbody>
+									<?php if($penyakit->num_rows() > 0):
+										foreach($penyakit->result_array() as $p): ?>
+										<tr>
+											<td><?= $p['kd_penyakit']; ?></td>
+											<td><?= $p['nama']; ?></td>
+											<td><?= $p['ket']; ?></td>
+											<td>
+												<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
+													<a href="<?= base_url('penyakit/ubahDataPenyakit/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
+													<a href="<?= base_url('penyakit/hapusDataPenyakit/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
+												</div>
+											</td>
+										</tr>
+									<?php endforeach; 
+										else:?>
+										<tr>
+											<td class="text-center" colspan="4">Belum ada data yang dimasukan</td>
+										</tr>
+									<?php endif; ?>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>

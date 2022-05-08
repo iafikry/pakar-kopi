@@ -104,6 +104,19 @@
 	color: #fff !important;
 	background-color: #084594;
 }
+.btn-outline-primer {
+	color: #2666cf;
+	border-color: #2666cf;
+}
+.btn-outline-primer:hover {
+	background-color: #084594;
+	color: #fff;
+	border-color: #084594;
+}
+.btn-outline-primer:focus {
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgba(8, 69, 148, 0.5);
+}
 .card-content {
 	border-radius: 25px;
 }

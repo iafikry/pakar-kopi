@@ -7,14 +7,14 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb mb-auto">
 							<li class="breadcrumb-item text-muted">Penyakit</li>
-							<li class="breadcrumb-item text-muted">Tambah data penyakit</li>
+							<li class="breadcrumb-item text-muted">Ubah data penyakit</li>
 						</ol>
 					</nav>
 				</div>
 			</div>
 			<div class="row container justify-content-between">
 				<div class="col-4">
-					<h2 class="text-base">Tambah data</h2>
+					<h2 class="text-base">Ubah data</h2>
 				</div>
 			</div>
 		</div>
@@ -26,19 +26,19 @@
 							<form action="" method="post">
 								<div class="row g-2 p-3">
 									<div class="col-md-2 form-floating">
-										<input type="text" class="form-control <?= (form_error('kd_penyakit')) ? 'is-invalid' : '' ?>" id="kd_penyakit" placeholder="Kode penyakit" name="kd_penyakit" value="<?= $kd_penyakit ?>" readonly>
+										<input type="text" class="form-control <?= (form_error('kd_penyakit')) ? 'is-invalid' : '' ?>" id="kd_penyakit" placeholder="Kode penyakit" name="kd_penyakit" value="<?= $penyakit['kd_penyakit'] ?>" readonly>
 										<label class="text-muted" for="floatingInputValue">Kode penyakit</label>
 										<?= form_error('kd_penyakit','<div class="invalid-feedback">','</div>') ?>
 									</div>
 									<div class="col-md-10 form-floating">
-										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama penyakit" name="nama">
+										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama penyakit" name="nama" value="<?= $penyakit['nama']; ?>">
 										<label class="text-muted" for="floatingInputNamaPenyakit">Nama penyakit</label>
 										<?= form_error('nama','<div class="invalid-feedback">','</div>') ?>
 									</div>
 								</div>
 								<div class="row g-2 p-3">
 									<div class="col-md-12 form-floating">
-										<textarea class="form-control" placeholder="Keterangan" name="ket" id="ket" style="height: 100px"></textarea>
+										<textarea class="form-control" placeholder="Keterangan" name="ket" id="ket" style="height: 100px"><?= $penyakit['ket']; ?></textarea>
 										<label class="text-muted" for="floatingInputKeteranganPenyakit">Keterangan</label>
 									</div>
 								</div>
