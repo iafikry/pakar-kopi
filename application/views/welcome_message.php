@@ -40,7 +40,6 @@
 						<div class="card billboard border-0 bg-transparent text-light position-relative">
 							<div class="card-body">
 								<h1 class="text-title">cari tahu penyakit apa yang sedang dialami  oleh tanaman kopimu</h1>
-								<h4 class="fw-normal">ES Kopi merupakan sistem pakar (<i>expert system</i>) untuk mendiagnosis penyakit pada tanaman kopi robusta dan liberika</h4>
 							</div>
 						</div>
 					</div>
@@ -56,7 +55,7 @@
 				</div>
 				<div class="row pt-3">
 					<div class="col-lg">
-						<h3 class="text-base text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia itaque vitae veritatis aut vel sapiente, tenetur dolores aliquam! Nihil, nemo adipisci! Explicabo totam aut ex!</h3>
+						<h3 class="text-base text-center">ES Kopi merupakan sistem pakar (<i>expert system</i>) untuk mendiagnosis penyakit pada tanaman kopi robusta dan liberika</h3>
 					</div>
 				</div>
 				<div class="row pt-3 justify-content-center">
@@ -84,8 +83,7 @@
 								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwVirus" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body" id="cdGejala">
-								<h5 class="card-title">Lorem, ipsum dolor.</h5>
-								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
+								<p class="card-text">Pada sisitem ini terdapat 14 gejala yang menjadi faktor acuan untuk menentukan sebuah penyakit.</p>
 								<a href="#page4" id="linkGejala" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
@@ -97,8 +95,7 @@
 								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwBrainstorm" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body" id="cdMetode">
-								<h5 class="card-title">Lorem, ipsum dolor.</h5>
-								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
+								<p class="card-text">Metode yang digunakan pada penelitan ini ada 2 yaitu metode Backward Chaining dan metode TOPSIS.</p>
 								<a href="#page4" id="linkMetode" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
