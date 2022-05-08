@@ -28,17 +28,17 @@ window.addEventListener("scroll", function () {
 	prevPos = currentPos;
 });
 
-const menuGejala = document.getElementById("menuGejala");
-menuGejala.addEventListener("click", function () {
-	console.log("tambah class active di gejala");
-	let link = document.getElementsByClassName("link-dark");
-	for (let i = 0; i < link.length; i++) {
-		if (link.classList.contains("active")) {
-			link.classList.remove("active");
-		}
-	}
-	menuGejala.classList.add("active");
-});
+// const menuGejala = document.getElementById("menuGejala");
+// menuGejala.addEventListener("click", function () {
+// 	console.log("tambah class active di gejala");
+// 	let link = document.getElementsByClassName("link-dark");
+// 	for (let i = 0; i < link.length; i++) {
+// 		if (link.classList.contains("active")) {
+// 			link.classList.remove("active");
+// 		}
+// 	}
+// 	menuGejala.classList.add("active");
+// });
 
 //tooltip
 $(function () {
@@ -87,24 +87,68 @@ iconBrainstorm.addEventListener("mouseout", function () {
 	shadow.style.removeProperty("width");
 });
 
+const linkPenyakit = document.getElementById("linkPenyakit");
+linkPenyakit.addEventListener("click", function () {
+	const tabPenyakit = document.getElementById("tabPenyakit");
+	const tabMetode = document.getElementById("tabMetode");
+	const tabGejala = document.getElementById("tabGejala");
+	if (tabGejala.classList.contains("active")) {
+		console.log("tab gejala hilang");
+		tabGejala.classList.remove("active");
+		document.getElementById("gejala").classList.remove("show", "active");
+	}
+	if (tabMetode.classList.contains("active")) {
+		console.log("tab metode hilang");
+		tabMetode.classList.remove("active");
+		document.getElementById("metode").classList.remove("show", "active");
+	}
+	if (!tabPenyakit.classList.contains("active")) {
+		tabPenyakit.classList.add("active");
+		console.log("tab penyakit muncul");
+		document.getElementById("penyakit").classList.add("show", "active");
+	}
+});
+
 const linkGejala = document.getElementById("linkGejala");
 linkGejala.addEventListener("click", function () {
 	const tabPenyakit = document.getElementById("tabPenyakit");
 	const tabMetode = document.getElementById("tabMetode");
 	const tabGejala = document.getElementById("tabGejala");
 	if (tabPenyakit.classList.contains("active")) {
-		// console.log("tab penyakit hilang");
+		console.log("tab penyakit hilang");
 		tabPenyakit.classList.remove("active");
 		document.getElementById("penyakit").classList.remove("show", "active");
 	}
 	if (tabMetode.classList.contains("active")) {
-		// console.log("tab metode hilang");
+		console.log("tab metode hilang");
 		tabMetode.classList.remove("active");
 		document.getElementById("metode").classList.remove("show", "active");
 	}
 	tabGejala.classList.add("active");
-	// console.log("tab gejala muncul");
+	console.log("tab gejala muncul");
 	document.getElementById("gejala").classList.add("show", "active");
+});
+
+const linkMetode = document.getElementById("linkMetode");
+linkMetode.addEventListener("click", function () {
+	const tabPenyakit = document.getElementById("tabPenyakit");
+	const tabMetode = document.getElementById("tabMetode");
+	const tabGejala = document.getElementById("tabGejala");
+	if (tabPenyakit.classList.contains("active")) {
+		console.log("tab penyakit hilang");
+		tabPenyakit.classList.remove("active");
+		document.getElementById("penyakit").classList.remove("show", "active");
+	}
+	if (tabGejala.classList.contains("active")) {
+		console.log("tab metode hilang");
+		tabGejala.classList.remove("active");
+		document.getElementById("gejala").classList.remove("show", "active");
+	}
+	if (!tabMetode.classList.contains("active")) {
+		tabMetode.classList.add("active");
+		console.log("tab metode muncul");
+		document.getElementById("metode").classList.add("show", "active");
+	}
 });
 
 // const btnNext = document.getElementById("btnNext");

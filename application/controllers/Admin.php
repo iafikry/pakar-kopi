@@ -9,9 +9,11 @@ class Admin extends CI_Controller
 		$this->load->library('form_validation');
 	}
 	public function index(){
-		$this->load->view('templates/header-admin');
+		$data['penyakit'] = $this->db->get('penyakit');
+		$data['judul'] = "Dashboard // ES Kopi";
+		$this->load->view('templates/header-admin', $data);
 		$this->load->view('templates/sidebar-admin');
-		$this->load->view('admin/dashboard');
+		$this->load->view('admin/dashboard', $data);
 		$this->load->view('templates/footer-admin');
 	}
 	

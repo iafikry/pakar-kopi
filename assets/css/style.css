@@ -27,7 +27,7 @@
 	display: inline-block;
 	padding: 1rem 1.5rem;
 	line-height: 1;
-	color: #42c2ff;
+	color: #2666cf;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: baseline;
@@ -36,13 +36,13 @@
 	background-color: #fff !important;
 }
 .badge-pill:hover {
-	background-color: #42c2ff !important;
-	border: 1px solid #42c2ff;
+	background-color: #084594 !important;
+	border: 1px solid #084594;
 	color: #fff;
 }
 .badge-pill.active {
-	background-color: #42c2ff !important;
-	border: 1px solid #42c2ff;
+	background-color: #084594 !important;
+	border: 1px solid #084594;
 	color: #fff !important;
 }
 /* .bayangan {
@@ -340,6 +340,9 @@ header {
 	}
 	.row-button-next-prev {
 		min-height: 200px;
+	}
+	.content-page4 {
+		min-height: 715px;
 	}
 	.txt-menu:after {
 		content: "";

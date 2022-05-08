@@ -2,7 +2,7 @@
 	<aside class="position-fixed sidebar border-end d-flex flex-column bg-white" >
 		<div class="w-100 bg-white">
 			<div class="py-1 px-3">
-				<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none border-bottom">
+				<a href="<?= base_url('admin') ?>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none border-bottom">
 					<img src="<?= base_url('assets/img/logo fill-blue.svg') ?>" alt="logo" height="80">
 				</a>
 			</div> 

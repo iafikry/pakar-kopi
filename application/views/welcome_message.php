@@ -72,9 +72,8 @@
 								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" id="sdwKopi" alt="bayangan" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body" id="cdPenyakit">
-								<h5 class="card-title">Lorem, ipsum dolor.</h5>
-								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
-								<a href="#" class="text-base">Lihat selengkapnya</a>
+								<p class="card-text">Terdapat <?= $penyakit->num_rows(); ?> penyakit yang diteliti pada penelitiian ini. Anda dapat melihat daftar penyakitnya di bagian Penyakit.</p>
+								<a href="#page4" id="linkPenyakit" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
 					</div>
@@ -100,7 +99,7 @@
 							<div class="card-body" id="cdMetode">
 								<h5 class="card-title">Lorem, ipsum dolor.</h5>
 								<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nam.</p>
-								<a href="#" class="text-base">Lihat selengkapnya</a>
+								<a href="#page4" id="linkMetode" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
 					</div>
@@ -196,77 +195,25 @@
 				<div class="tab-content">
 					<div class="tab-pane fade show active" id="penyakit" role="tabpanel" aria-labelledby="tab-penyakit">
 						<div class="row justify-content-evenly">
+							<?php $no = 1; ?>
+							<?php foreach($penyakit->result_array() as $p): ?>
 							<div class="card border-0 bg-transparent card-penyakit">
 								<div class="row justify-content-end">
 									<div class="col-sm-4">
-										<span class="number-penyakit d-flex align-self-stretch">1</span>
+										<span class="number-penyakit d-flex align-self-stretch"><?= $no++; ?></span>
 									</div>
 								</div>
 								<div class="card-body pt-5">
-									<h5 class="card-title">Lorem, ipsum dolor sit amet.</h5>
-									<p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident non illum nesciunt vero consequatur optio perspiciatis repellendus voluptas doloribus distinctio! Blanditiis ea enim at distinctio!</p>
+									<h5 class="card-title"><?= $p['nama']; ?></h5>
+									<p class="card-text"><?= $p['ket']; ?></p>
 								</div>
 							</div>
-							<div class="card border-0 bg-transparent card-penyakit">
-								<div class="row justify-content-end">
-									<div class="col-sm-4">
-										<span class="number-penyakit d-flex align-self-stretch">2</span>
-									</div>
-								</div>
-								<div class="card-body pt-5">
-									<h5 class="card-title">Lorem, ipsum dolor sit amet.</h5>
-									<p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident non illum nesciunt vero consequatur optio perspiciatis repellendus voluptas doloribus distinctio! Blanditiis ea enim at distinctio!</p>
-								</div>
-							</div>
-							<div class="card border-0 bg-transparent card-penyakit">
-								<div class="row justify-content-end">
-									<div class="col-sm-4">
-										<span class="number-penyakit d-flex align-self-stretch">3</span>
-									</div>
-								</div>
-								<div class="card-body pt-5">
-									<h5 class="card-title">Lorem, ipsum dolor sit amet.</h5>
-									<p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident non illum nesciunt vero consequatur optio perspiciatis repellendus voluptas doloribus distinctio! Blanditiis ea enim at distinctio!</p>
-								</div>
-							</div>
-							<div class="card border-0 bg-transparent card-penyakit">
-								<div class="row justify-content-end">
-									<div class="col-sm-4">
-										<span class="number-penyakit d-flex align-self-stretch">4</span>
-									</div>
-								</div>
-								<div class="card-body pt-5">
-									<h5 class="card-title">Lorem, ipsum dolor sit amet.</h5>
-									<p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident non illum nesciunt vero consequatur optio perspiciatis repellendus voluptas doloribus distinctio! Blanditiis ea enim at distinctio!</p>
-								</div>
-							</div>
-							<div class="card border-0 bg-transparent card-penyakit">
-								<div class="row justify-content-end">
-									<div class="col-sm-4">
-										<span class="number-penyakit d-flex align-self-stretch">5</span>
-									</div>
-								</div>
-								<div class="card-body pt-5">
-									<h5 class="card-title">Lorem, ipsum dolor sit amet.</h5>
-									<p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident non illum nesciunt vero consequatur optio perspiciatis repellendus voluptas doloribus distinctio! Blanditiis ea enim at distinctio!</p>
-								</div>
-							</div>
-							<div class="card border-0 bg-transparent card-penyakit">
-								<div class="row justify-content-end">
-									<div class="col-sm-4">
-										<span class="number-penyakit d-flex align-self-stretch">6</span>
-									</div>
-								</div>
-								<div class="card-body pt-5">
-									<h5 class="card-title">Lorem, ipsum dolor sit amet.</h5>
-									<p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident non illum nesciunt vero consequatur optio perspiciatis repellendus voluptas doloribus distinctio! Blanditiis ea enim at distinctio!</p>
-								</div>
-							</div>
+							<?php endforeach; ?>
 						</div>
 					</div>
 					<div class="tab-pane fade" id="gejala" role="tabpanel" aria-labelledby="tab-gejala">
 						<div class="row">
-							<div class="col-7">
+							<div class="col">
 								<div class="row">
 									<div class="col">
 										<ol class="list-group list-group-numbered border-0">
@@ -291,9 +238,6 @@
 										</ol>
 									</div>
 								</div>
-							</div>
-							<div class="col-5 d-flex align-items-center">
-								<img src="<?= base_url('assets/img/clint-mckoy-unsplash.jpg') ?>" alt="tanaman-kopi" class="img-gejala">
 							</div>
 						</div>
 					</div>

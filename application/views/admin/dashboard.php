@@ -24,8 +24,7 @@
 						<img src="<?= base_url('assets/img/coffee-beans.png') ?>" alt="biji kopi" width="88">
 					</div>
 					<div class="card-body position-relative card-body-dashboard">
-						<h5 class="card-title">Lorem, ipsum dolor.</h5>
-						<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit magni odit sapiente cupiditates.</p>
+						<p class="card-text">Terdapat <?= $penyakit->num_rows(); ?> penyakit yang diteliti pada penelitiian ini. Anda dapat melihat daftar penyakitnya di bagian Penyakit.</p>
 					</div>
 				</div>
 				<div class="card border-0 card-content bg-blue-2" style="width: 18rem;">
