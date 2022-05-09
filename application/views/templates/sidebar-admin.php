@@ -15,7 +15,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" id="menuGejala" href="<?= base_url('admin/gejala') ?>">					
+				<a class="nav-link link-dark" id="menuGejala" href="<?= base_url('gejala') ?>">					
 				<i class="bi bi-shield-check"></i>
 				Gejala
 				</a>
