@@ -246,10 +246,10 @@
 							<div class="col-5">
 								<div class="card card-metode">
 									<div class="card-body text-base">
-										<h5 class="card-title">
+										<h5 class="card-title text-center">
 											Backward Chaining
 										</h5>
-										<p>
+										<p class="text-justify">
 											Backward Chaining adalah pendekatan yang dimotori tujuan (goal driven) yaitu pelacakan yang dimulai dari tujuan, selanjutnya dicari aturan yang memiliki tujuan tersebut untuk kesimpulannya. Selanjutnya proses pelacakan menggunakan premis untuk aturan tersebut sebagai tujuan baru dan mencari aturan lain dengan tujuan baru sebagai kesimpulannya (Dahria, 2012).
 										</p>
 									</div>
@@ -258,10 +258,10 @@
 							<div class="col-5">
 								<div class="card card-metode">
 									<div class="card-body text-base">
-										<h5 class="card-title">
+										<h5 class="card-title text-center">
 											Technique For Order Preference By Similarity To Ideal  Solution (TOPSIS)
 										</h5>
-										<p>
+										<p class="text-justify">
 											Metode TOPSIS adalah salah satu metode pengambilan keputusan multikriteria yang pertama kali diperkenalkan oleh Yoon dan Hwang pada tahun 1981. Metode ini merupakan salah satu metode yang banyak digunakan untuk menyelesaikan pengambilan keputusan secara praktis.
 										</p>
 									</div>
@@ -277,7 +277,7 @@
 		  <div class="container">
 			  <div class="row pt-5">
 				  <div class="col-3">
-					  <h4 class="text-uppercase text-light fw-bold">logo</h4>
+					 <img src="<?= base_url('assets/img/logo fill - white.svg') ?>" alt="logo" height="80" class="d-inline-block" style="fill: #fffff;">
 				  </div>
 			  </div>
 			  <div class="row">

@@ -163,6 +163,20 @@
 	outline: 0;
 	box-shadow: 0 0 0 0.25rem rgba(8, 69, 148, 0.25) !important;
 }
+.form-select {
+	color: #1e272e !important;
+}
+.form-select > option:hover {
+	background-color: #2666cf !important;
+	color: #fff !important;
+}
+.form-select:focus {
+	color: #1e272e !important;
+	background-color: #fff;
+	border-color: #084594 !important;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgba(8, 69, 148, 0.25) !important;
+}
 footer {
 	background-color: #084594;
 }
@@ -222,7 +236,6 @@ header {
 	bottom: 0;
 	width: 260px;
 }
-
 .tab-pane {
 	min-height: 300px;
 }
@@ -231,6 +244,9 @@ header {
 }
 .text-blue-primer {
 	color: #42c2ff !important;
+}
+.text-justify {
+	text-align: justify !important;
 }
 .text-title {
 	font-size: 3.5rem;

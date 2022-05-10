@@ -37,12 +37,12 @@
 									</div>
 									<div class="col-md-2 form-floating">
 										<select name="bobot" id="bobot" class="form-select <?= (form_error('bobot')) ? 'is-invalid' : '' ?>" aria-label="Bobot gejala">
-											<option value="" selected>Pilih bobot</option>
-											<option value="1" <?= set_select('bobot', '1') ?>>1</option>
-											<option value="2" <?= set_select('bobot', '2') ?>>2</option>
-											<option value="3" <?= set_select('bobot', '3') ?>>3</option>
-											<option value="4" <?= set_select('bobot', '4') ?>>4</option>
-											<option value="5" <?= set_select('bobot', '5') ?>>5</option>
+											<option class="pilihan" value="" selected>Pilih bobot</option>
+											<option class="pilihan" value="1" <?= set_select('bobot', '1') ?>>1</option>
+											<option class="pilihan" value="2" <?= set_select('bobot', '2') ?>>2</option>
+											<option class="pilihan" value="3" <?= set_select('bobot', '3') ?>>3</option>
+											<option class="pilihan" value="4" <?= set_select('bobot', '4') ?>>4</option>
+											<option class="pilihan" value="5" <?= set_select('bobot', '5') ?>>5</option>
 										</select>
 										<label for="labelBobot">Bobot gejala</label>
 										<?= form_error('bobot', '<div class="invalid-feedback">','</div>') ?>
