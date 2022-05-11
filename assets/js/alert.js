@@ -7,12 +7,16 @@ if (flashData) {
 			icon: "success",
 			title: "Berhasil!",
 			text: "Data telah tersimpan",
+			timer: 2000,
+			timerProgressBar: true,
 		});
 	} else if (flashData == "hapus") {
 		Swal.fire({
 			icon: "success",
 			title: "Berhasil!",
 			text: "Data telah terhapus",
+			timer: 2000,
+			timerProgressBar: true,
 		});
 	}
 }

@@ -17,5 +17,13 @@ class Admin extends CI_Controller
 		$this->load->view('templates/footer-admin');
 	}
 	
+	public function rule(){
+		$data['judul'] = 'Aturan // ES Kopi';
+		$this->load->view('templates/header-admin', $data);
+		$this->load->view('templates/sidebar-admin');
+		$this->load->view('admin/dashboard', $data);
+		$this->load->view('templates/footer-admin');
+	}
+	
 }
 

@@ -26,9 +26,12 @@ class Gejala extends CI_Controller
 		$this->form_validation->set_rules('kd_gejala', 'Kode', 'trim|required', [
 			'required' => '{field} harus diisi'
 		]);
-		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|regex_match[/^([a-z ])+$/i]', [
+		// $this->form_validation->set_rules('nama', 'Nama', 'trim|required|regex_match[/^([a-z ])+$/i]', [
+		// 	'required' => '{field} harus diisi',
+		// 	'regex_match' => '{field} hanya berisikan alfabet',
+		// ]);
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required', [
 			'required' => '{field} harus diisi',
-			'regex_match' => '{field} hanya berisikan alfabet',
 		]);
 		$this->form_validation->set_rules('bobot', 'Bobot', 'required', [
 			'required' => '{field} harus diisi!'
@@ -56,9 +59,12 @@ class Gejala extends CI_Controller
 		$this->form_validation->set_rules('kd_gejala', 'Kode', 'trim|required', [
 			'required' => '{field} harus diisi'
 		]);
-		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|regex_match[/^([a-z ])+$/i]', [
+		// $this->form_validation->set_rules('nama', 'Nama', 'trim|required|regex_match[/^([a-z ])+$/i]', [
+		// 	'required' => '{field} harus diisi',
+		// 	'regex_match' => '{field} hanya berisikan alfabet',
+		// ]);
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required', [
 			'required' => '{field} harus diisi',
-			'regex_match' => '{field} hanya berisikan alfabet',
 		]);
 		$this->form_validation->set_rules('bobot', 'Bobot', 'required', [
 			'required' => '{field} harus diisi!'
