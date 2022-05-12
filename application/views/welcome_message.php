@@ -83,7 +83,7 @@
 								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwVirus" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body" id="cdGejala">
-								<p class="card-text">Pada sisitem ini terdapat 14 gejala yang menjadi faktor acuan untuk menentukan sebuah penyakit.</p>
+								<p class="card-text">Pada sisitem ini terdapat <?= $gejala->num_rows(); ?> gejala yang menjadi faktor acuan untuk mendiagnosa sebuah penyakit.</p>
 								<a href="#page4" id="linkGejala" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
@@ -211,30 +211,15 @@
 					<div class="tab-pane fade" id="gejala" role="tabpanel" aria-labelledby="tab-gejala">
 						<div class="row">
 							<div class="col">
-								<div class="row">
-									<div class="col">
-										<ol class="list-group list-group-numbered border-0">
-											<li class="list-group-item border-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos?</li>
-											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore.</li>
-											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-										</ol>		
-									</div>
-									<div class="col">
-										<ol class="list-group list-group-numbered" start="8">
-											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos?</li>
-											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore.</li>
-											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-											<li class="list-group-item border-0 list-continuing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</li>
-										</ol>
-									</div>
-								</div>
+								<ol class="list-group <?= ($gejala->num_rows() > 0) ? 'list-group-numbered' : ''?>">
+									<?php if($gejala->num_rows() > 0): ?>
+										<?php foreach($gejala->result_array() as $g): ?>
+											<li class="list-group-item"><?='Apakah '. $g['nama'].'?'; ?></li>
+										<?php endforeach; ?>
+										<?php else: ?>
+											<li class="list-group-item">Data belum dimasukan</li>
+									<?php endif; ?>
+								</ol>
 							</div>
 						</div>
 					</div>
