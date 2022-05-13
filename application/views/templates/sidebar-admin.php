@@ -27,7 +27,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" id="menuRule" href="#">
+				<a class="nav-link link-dark" id="menuRule" href="<?= base_url('admin/rule') ?>">
 				<i class="bi bi-sliders"></i>
 				Aturan
 				</a>

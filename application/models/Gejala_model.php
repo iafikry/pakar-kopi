@@ -13,6 +13,5 @@ class Gejala_model extends MY_Model
 
 		}
 		return $kode;
-		
 	}
 }
