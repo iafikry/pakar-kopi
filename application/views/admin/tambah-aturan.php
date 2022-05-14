@@ -36,6 +36,24 @@
 										<?= form_error('penyakit', '<div class="invalid-feedback">','</div>') ?>
 									</div>
 								</div>
+								<div class="row g-2 p-3">
+									<div class="col-md-12">
+										<?php if($gejala->num_rows() > 0): ?>
+											<p class="text-base">Gejala yang dialami:</p>
+											<ul class="list-group">
+												<?php $no = 0; ?>
+												<?php foreach($gejala->result_array() as $g): ?>
+													<li class="list-group-item">
+														<input class="form-check-input me-1" name="<?= 'gejala'. $no++; ?>" type="checkbox" value="<?= $g['kd_gejala']; ?>">
+														<?= 'Apakah '. $g['nama'] . '?'; ?>
+													</li>
+												<?php endforeach; ?>
+											</ul>
+										<?php else: ?>
+											<p class="text-base text-center">Penyakit/Gejala belum dimasukan.</p>
+										<?php endif; ?>
+									</div>
+								</div>
 								<div class="row p-3">
 									<div class="col-md-2">
 										<button type="submit" class="btn btn-primer">Submit</button>

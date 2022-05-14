@@ -15,7 +15,7 @@
 					<h2 class="text-base">Aturan</h2>
 				</div>
 				<div class="col-4 d-flex justify-content-end align-items-center">
-					<a href="<?= base_url('gejala/tambahAturan') ?>" class="btn align-content-center btn-primer" title="Tambah aturan" data-bs-toggle="tooltip" data-bs-placement="top">Tambah aturan</a>
+					<a href="<?= base_url('admin/tambahAturan') ?>" class="btn align-content-center btn-primer" title="Tambah aturan" data-bs-toggle="tooltip" data-bs-placement="top">Tambah aturan</a>
 				</div>
 			</div>
 		</div>

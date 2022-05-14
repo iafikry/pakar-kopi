@@ -25,6 +25,7 @@ class Admin extends CI_Controller
 		$data['judul'] = 'Aturan // ES Kopi';
 		$data['penyakit'] = $this->db->get('penyakit');
 		$data['gejala'] = $this->db->get('gejala');
+		
 		$this->load->view('templates/header-admin', $data);
 		$this->load->view('templates/sidebar-admin');
 		$this->load->view('admin/rule', $data);
