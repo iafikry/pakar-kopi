@@ -26,14 +26,14 @@
 							<form action="" method="post">
 								<div class="row g-2 p-3">
 									<div class="col-md-12 form-floating">
-										<select name="penyakit" id="penyakit" class="form-select <?= (form_error('penyakit')) ? 'is-invalid' : '' ?>" aria-label="penyakit">
+										<select name="jPenyakit" id="penyakit" class="form-select <?= (form_error('jPenyakit')) ? 'is-invalid' : '' ?>" aria-label="penyakit">
 											<option class="pilihan" value="" selected>Pilih penyakit</option>
 											<?php foreach($penyakit->result_array() as $p): ?>
-												<option class="pilihan" value="<?= $p['kd_penyakit']; ?>" <?= set_select('penyakit', $p['kd_penyakit']) ?>><?= $p['nama']; ?></option>
+												<option class="pilihan" value="<?= $p['kd_penyakit']; ?>" <?= set_select('jPenyakit', $p['kd_penyakit']) ?>><?= $p['nama']; ?></option>
 											<?php endforeach; ?>
 										</select>
 										<label for="labelpenyakit">Jenis penyakit</label>
-										<?= form_error('penyakit', '<div class="invalid-feedback">','</div>') ?>
+										<?= form_error('jPenyakit', '<div class="invalid-feedback">','</div>') ?>
 									</div>
 								</div>
 								<div class="row g-2 p-3">

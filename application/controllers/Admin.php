@@ -37,6 +37,9 @@ class Admin extends CI_Controller
 		$data['penyakit'] = $this->AM->ambilSemuaData('penyakit');
 		$data['gejala'] = $this->AM->ambilSemuaData('gejala');
 		
+		$this->form_validation->set_rules('jPenyakit', 'Jenis penyakit', 'trim|required', [
+			'required' => '{field} harus diisi!'
+		]);
 		
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header-admin', $data);
