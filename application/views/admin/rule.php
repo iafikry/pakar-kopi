@@ -28,30 +28,18 @@
 								<table class="table table-striped text-base">
 									<thead>
 										<tr>
-											<th scope="col">Kode gejala</th>
+											<th scope="col">Penyakit</th>
 											<th scope="col">Gejala</th>
-											<th scope="col">Bobot</th>
 											<th scope="col">Opsi</th>
 										</tr>
 									</thead>
 									<tbody>
-									<?php if($gejala->num_rows() > 0):
-										foreach($gejala->result_array() as $g): ?>
+									<?php if($rule->num_rows() > 0): ?>
+										<?php //foreach(): ?>
+										<?php //endforeach; ?>
+									<?php else:?>
 										<tr>
-											<td><?= $g['kd_gejala']; ?></td>
-											<td><?= $g['nama']; ?></td>
-											<td><?= $g['bobot']; ?></td>
-											<td>
-												<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
-													<a href="<?= base_url('gejala/ubahDataGejala/' . $g['kd_gejala']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
-													<a href="<?= base_url('gejala/hapusDataGejala/' . $g['kd_gejala']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
-												</div>
-											</td>
-										</tr>
-									<?php endforeach; 
-										else:?>
-										<tr>
-											<td class="text-center" colspan="4">Belum ada data yang dimasukan</td>
+											<td class="text-center" colspan="3">Belum ada data yang dimasukan</td>
 										</tr>
 									<?php endif; ?>
 									</tbody>

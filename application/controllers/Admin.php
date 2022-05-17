@@ -25,6 +25,7 @@ class Admin extends CI_Controller
 		$data['judul'] = 'Aturan // ES Kopi';
 		$data['penyakit'] = $this->db->get('penyakit');
 		$data['gejala'] = $this->db->get('gejala');
+		$data['rule'] = $this->db->get('aturan');
 		
 		$this->load->view('templates/header-admin', $data);
 		$this->load->view('templates/sidebar-admin');
@@ -47,7 +48,20 @@ class Admin extends CI_Controller
 			$this->load->view('admin/tambah-aturan', $data);
 			$this->load->view('templates/footer-admin');
 		} else {
-			echo 'ok si paling mantep';
+			$jmlGejala = $this->db->get('gejala')->num_rows(); //ambil jumlah banyaknya gejala
+			for ($i=0; $i < $jmlGejala; $i++) { 
+				$gejala = $this->input->post('gejala'.$i);
+				if (isset($gejala)) {
+					$rule = [
+						'id' => '',
+						'kd_penyakit' => $this->input->post('jPenyakit'),
+						'kd_gejala' => $gejala
+					];
+					$this->AM->tambahData('aturan', $rule);
+				}
+			}
+			$this->session->set_flashdata('message', 'simpan');
+			redirect('admin/rule');
 		}
 		
 	}
