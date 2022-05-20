@@ -14,4 +14,12 @@ class Admin_model extends MY_Model
 	// 	}
 	// 	return $kode;
 	// }
+ 
+	public function rule(){
+		$this->db->select('p.nama as nama_penyakit, g.nama as nama_gejala, at.kd_penyakit as kode_penyakit');
+		$this->db->from('aturan at');
+		$this->db->join('gejala g', 'g.kd_gejala = at.kd_gejala');
+		$this->db->join('penyakit p', 'p.kd_penyakit = at.kd_penyakit');
+		return $this->db->get();
+	}
 }

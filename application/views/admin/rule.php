@@ -35,8 +35,28 @@
 									</thead>
 									<tbody>
 									<?php if($rule->num_rows() > 0): ?>
-										<?php //foreach(): ?>
-										<?php //endforeach; ?>
+										<?php foreach($penyakit->result_array() as $p): ?>
+											<tr>
+												<td><?= $p['nama']; ?></td>
+												<ul class="list-group border-0 bg-transparent">
+													<td>
+														<?php foreach($rule->result_array() as $r): 
+															if($p['kd_penyakit'] == $r['kode_penyakit']):?>
+															<li class="list-group-item border-0 bg-transparent">
+																<?= $r['nama_gejala']; ?>
+															</li>
+														<?php endif; 
+														endforeach; ?>
+													</td>
+												</ul>
+												<td>
+													<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
+														<a href="<?= base_url('admin/ubahDataRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
+														<a href="<?= base_url('admin/hapusRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
+													</div>
+												</td>
+											</tr>
+										<?php endforeach; ?>
 									<?php else:?>
 										<tr>
 											<td class="text-center" colspan="3">Belum ada data yang dimasukan</td>
