@@ -52,7 +52,7 @@
 												<td>
 													<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
 														<a href="<?= base_url('admin/ubahDataRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
-														<a href="<?= base_url('admin/hapusRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
+														<a href="<?= base_url('admin/hapusDataRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
 													</div>
 												</td>
 											</tr>

@@ -66,6 +66,43 @@ class Admin extends CI_Controller
 		}
 		
 	}
+
+	public function ubahDataRule($kode_penyakit){
+		$data['judul'] = 'Ubah data // ES Kopi';
+		$data['penyakit'] = $this->AM->ambilSemuaData($table = 'penyakit');
+		$data['gejala'] = $this->AM->ambilSemuaData($table = 'gejala');
+		$data['rule'] = $this->AM->ambilDataAturan($kode_penyakit);
+		$this->form_validation->set_rules('kd_penyakit', 'Kode Penyakit', 'trim|required');
+		
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('templates/header-admin', $data);
+			$this->load->view('templates/sidebar-admin');
+			$this->load->view('admin/ubah-aturan', $data);
+			$this->load->view('templates/footer-admin');
+		} else {
+			$this->AM->hapusData('aturan', ['kd_penyakit' => $kode_penyakit]);
+			$jmGejala = $this->db->get('gejala')->num_rows();
+			for ($i=0; $i < $jmGejala; $i++) { 
+				$gejala = $this->input->post('gejala'.$i);
+				if (isset($gejala)) {
+					$rule = [
+						'id' => '',
+						'kd_penyakit' => $kode_penyakit,
+						'kd_gejala' => $gejala
+					];
+					$this->AM->tambahData('aturan', $rule);
+				}
+			}
+			$this->session->set_flashdata('message', 'simpan');
+			redirect('admin/rule');
+		}		
+	}
+
+	public function hapusDataRule($kode_penyakit){
+		$this->AM->hapusData('aturan', ['kd_penyakit' => $kode_penyakit]);
+		$this->session->set_flashdata('message', 'hapus');
+		redirect('admin/rule');
+	}
 	
 	
 }

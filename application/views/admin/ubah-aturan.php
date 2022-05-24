@@ -7,14 +7,14 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb mb-auto">
 							<li class="breadcrumb-item text-muted">Aturan</li>
-							<li class="breadcrumb-item text-muted">Tambah data aturan</li>
+							<li class="breadcrumb-item text-muted">Ubah data aturan</li>
 						</ol>
 					</nav>
 				</div>
 			</div>
 			<div class="row container justify-content-between">
 				<div class="col-4">
-					<h2 class="text-base">Tambah data</h2>
+					<h2 class="text-base">Ubah data</h2>
 				</div>
 			</div>
 		</div>
@@ -24,33 +24,32 @@
 					<div class="card w-100 bg-white card-content shadow" style="bottom:3rem;">
 						<div class="card-body">
 							<form action="" method="post">
+								<?php //var_dump($rule); die; ?>
 								<div class="row g-2 p-3">
 									<div class="col-md-12 form-floating">
-										<select name="jPenyakit" id="penyakit" class="form-select <?= (form_error('jPenyakit')) ? 'is-invalid' : '' ?>" aria-label="penyakit">
-											<option class="pilihan" value="" selected>Pilih penyakit</option>
-											<?php foreach($penyakit->result_array() as $p): ?>
-												<option class="pilihan" value="<?= $p['kd_penyakit']; ?>" <?= set_select('jPenyakit', $p['kd_penyakit']) ?>><?= $p['nama']; ?></option>
-											<?php endforeach; ?>
-										</select>
+										<input type="text" class="form-control" name="nama" value="<?= $rule[0]['nama_penyakit']; ?>" readonly>
 										<label for="labelpenyakit">Jenis penyakit</label>
-										<?= form_error('jPenyakit', '<div class="invalid-feedback">','</div>') ?>
 									</div>
+									<input type="hidden" name="kd_penyakit" value="<?= $rule[0]['kode_penyakit']; ?>">
 								</div>
 								<div class="row g-2 p-3">
 									<div class="col-md-12">
-										<?php if($gejala->num_rows() > 0): ?>
-											<p class="text-base">Gejala yang dialami:</p>
-											<ul class="list-group">
-												<?php $no = 0; ?>
-												<?php foreach($gejala->result_array() as $g): ?>
+										<p class="text-base">Gejala yang dialami:</p>
+										<ul class="list-group">
+											<?php $g = $gejala->result_array(); ?>
+											<?php for($i = 0; $i < $gejala->num_rows(); $i++): ?>
+												<?php foreach($rule as $r): ?>
+													<?php if($g[$i]['kd_gejala'] === $r['kode_gejala']): ?>
+														<li class="list-group-item">
+															<input type="checkbox" name="<?= 'gejala' . $i; ?>" class="form-check-input me-1" value="<?= $g[$i]['kd_gejala']; ?>" checked><?= 'Apakah '. $g[$i]['nama'] .'?' ?>
+														</li>
+														<?php $i++; endif; ?>
+													<?php endforeach; ?>
 													<li class="list-group-item">
-														<input class="form-check-input me-1" name="<?= 'gejala'. $no++; ?>" type="checkbox" value="<?= $g['kd_gejala']; ?>"><?= 'Apakah '. $g['nama'] . '?'; ?>
+														<input type="checkbox" name="<?= 'gejala' . $i; ?>" class="form-check-input me-1" value="<?= $g[$i]['kd_gejala']; ?>"><?= 'Apakah '. $g[$i]['nama'] .'?' ?>
 													</li>
-												<?php endforeach; ?>
-											</ul>
-										<?php else: ?>
-											<p class="text-base text-center">Penyakit/Gejala belum dimasukan.</p>
-										<?php endif; ?>
+											<?php endfor;  ?>
+										</ul>
 									</div>
 								</div>
 								<div class="row p-3">
