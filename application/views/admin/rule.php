@@ -15,7 +15,15 @@
 					<h2 class="text-base">Aturan</h2>
 				</div>
 				<div class="col-4 d-flex justify-content-end align-items-center">
-					<a href="<?= base_url('admin/tambahAturan') ?>" class="btn align-content-center btn-primer" title="Tambah aturan" data-bs-toggle="tooltip" data-bs-placement="top">Tambah aturan</a>
+					<?php if($penyakit->num_rows() == $cekJmlRule): ?>
+						<span class="d-inline-block" title="Tidak ada penyakit yang belum mempunyai rule/aturan" data-bs-toggle="tooltip" data-bs-placement="top">
+							<button type="button" class="btn align-content-center btn-primer" disabled>Tambah aturan</button>
+						</span>
+					<?php else: ?>
+						<a href="<?= base_url('admin/tambahAturan') ?>" title="Tambah aturan" data-bs-toggle="tooltip" data-bs-placement="top">
+							<button type="button" class="btn align-content-center btn-primer">Tambah aturan</button>
+						</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

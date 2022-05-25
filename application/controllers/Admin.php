@@ -24,6 +24,7 @@ class Admin extends CI_Controller
 	public function rule(){
 		$data['judul'] = 'Aturan // ES Kopi';
 		$data['penyakit'] = $this->db->get('penyakit');
+		$data['cekJmlRule'] = $this->db->distinct()->select('kd_penyakit')->get('aturan')->num_rows(); //cek jumlah rule pada db
 		for ($i=0; $i < $data['penyakit']->num_rows(); $i++) {
 			$p = $data['penyakit']->result_array();
 			$data['cekRule'][$p[$i]['kd_penyakit']] = $this->db->get_where('aturan', ['kd_penyakit' => $p[$i]['kd_penyakit']])->num_rows();

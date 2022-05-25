@@ -44,9 +44,9 @@
 												<?php $no = 0; ?>
 												<?php foreach($gejala->result_array() as $g): ?>
 													<li class="list-group-item">
-														<input class="form-check-input me-1" name="<?= 'gejala'. $no++; ?>" type="checkbox" value="<?= $g['kd_gejala']; ?>"><?= 'Apakah '. $g['nama'] . '?'; ?>
+														<input class="form-check-input me-1" name="<?= 'gejala'. $no; ?>" type="checkbox" value="<?= $g['kd_gejala']; ?>" <?= set_checkbox('gejala'.$no, $g['kd_gejala']) ?>><?= 'Apakah '. $g['nama'] . '?'; ?>
 													</li>
-												<?php endforeach; ?>
+												<?php $no++; endforeach; ?>
 											</ul>
 										<?php else: ?>
 											<p class="text-base text-center">Penyakit/Gejala belum dimasukan.</p>
