@@ -39,22 +39,33 @@
 											<tr>
 												<td><?= $p['nama']; ?></td>
 												<ul class="list-group border-0 bg-transparent">
+													<?php if($cekRule[$p['kd_penyakit']] > 0): ?>
 													<td>
-														<?php foreach($rule->result_array() as $r): 
-															if($p['kd_penyakit'] == $r['kode_penyakit']):?>
+														<?php foreach($rule->result_array() as $r): ?> 
+															<?php if($p['kd_penyakit'] == $r['kode_penyakit']):?>
 															<li class="list-group-item border-0 bg-transparent">
 																<?= $r['nama_gejala']; ?>
 															</li>
-														<?php endif; 
-														endforeach; ?>
+															<?php endif; ?> 
+														<?php endforeach; ?>
+													</td>
+													<td>
+														<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
+															<a href="<?= base_url('admin/ubahDataRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
+															<a href="<?= base_url('admin/hapusDataRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
+														</div>
+													</td>
+												<?php else: ?>
+													<td>
+														<li class="list-group-item border-0 bg-transparent">
+															<i>Belum isi data rule</i>
+														</li>
 													</td>
 												</ul>
 												<td>
-													<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
-														<a href="<?= base_url('admin/ubahDataRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
-														<a href="<?= base_url('admin/hapusDataRule/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
-													</div>
+													<a href="<?= base_url('admin/tambahAturan/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-primer" title="Tambah data rule" data-bs-toggle="tooltip" data-bs-placement="top"><i class="bi bi-pencil-square"></i></a>
 												</td>
+												<?php endif; ?>
 											</tr>
 										<?php endforeach; ?>
 									<?php else:?>
