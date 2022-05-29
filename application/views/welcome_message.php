@@ -95,7 +95,7 @@
 								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwBrainstorm" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body" id="cdMetode">
-								<p class="card-text">Metode yang digunakan pada penelitan ini ada 2 yaitu metode Backward Chaining dan metode TOPSIS.</p>
+								<p class="card-text">Metode yang digunakan pada penelitan ini ada 1 yaitu metode Backward Chaining dan metode TOPSIS.</p>
 								<a href="#page4" id="linkMetode" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
@@ -124,10 +124,10 @@
 												<label for="penyakit" class="col-sm-2 col-form-label">Piilih Penyakit</label>
 												<div class="col-sm-7">
 													<select class="form-select" id="selectPenyakit">
-														<option value="0" selected>Open this select menu</option>
-														<option value="1">One</option>
-														<option value="2">Two</option>
-														<option value="3">Three</option>
+														<option value="" selected>Pilih penyakt</option>
+														<?php foreach($penyakit->result_array() as $pn): ?>
+															<option value="<?= $pn['kd_penyakit']; ?>"><?= $pn['nama']; ?></option>
+														<?php endforeach; ?>
 													</select>
 												</div>
 											</div>
@@ -136,7 +136,9 @@
 								</div>
 							</div>
 							<div class="carousel-item">
-								<p>oke bisa</p>
+								<ul class="list-group border-0 bg-transparent" id="listGejala">
+
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -225,7 +227,7 @@
 					</div>
 					<div class="tab-pane fade" id="metode" role="tabpanel" aria-labelledby="tab-metode">
 						<div class="row pt-5">
-							<h5 class="text-base text-center">Terdapat 2 metode perhitungan yang digunakan pada sistem ini, yaitu <i>Backward Chaining</i> dan <i>Technique For Order Preference By Similarity To Ideal Solution</i> (TOPSIS)</h5>
+							<h5 class="text-base text-center">Terdapat 1 metode perhitungan yang digunakan pada sistem ini, yaitu <i>Backward Chaining.</i></h5>
 						</div>
 						<div class="row pt-5 justify-content-evenly">
 							<div class="col-5">
@@ -236,18 +238,6 @@
 										</h5>
 										<p class="text-justify">
 											Backward Chaining adalah pendekatan yang dimotori tujuan (goal driven) yaitu pelacakan yang dimulai dari tujuan, selanjutnya dicari aturan yang memiliki tujuan tersebut untuk kesimpulannya. Selanjutnya proses pelacakan menggunakan premis untuk aturan tersebut sebagai tujuan baru dan mencari aturan lain dengan tujuan baru sebagai kesimpulannya (Dahria, 2012).
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-5">
-								<div class="card card-metode">
-									<div class="card-body text-base">
-										<h5 class="card-title text-center">
-											Technique For Order Preference By Similarity To Ideal  Solution (TOPSIS)
-										</h5>
-										<p class="text-justify">
-											Metode TOPSIS adalah salah satu metode pengambilan keputusan multikriteria yang pertama kali diperkenalkan oleh Yoon dan Hwang pada tahun 1981. Metode ini merupakan salah satu metode yang banyak digunakan untuk menyelesaikan pengambilan keputusan secara praktis.
 										</p>
 									</div>
 								</div>

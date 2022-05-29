@@ -166,7 +166,7 @@ linkMetode.addEventListener("click", function () {
 const selectPenyakit = document.getElementById("selectPenyakit");
 selectPenyakit.addEventListener("change", function () {
 	const penyakit = selectPenyakit.value;
-	console.log(penyakit);
+	// console.log(penyakit);
 	const btnNext = document.getElementById("btnNextPrev");
 	if (penyakit != 0) {
 		if (btnNext.hasAttribute("disabled")) {
@@ -175,12 +175,26 @@ selectPenyakit.addEventListener("change", function () {
 	} else {
 		btnNext.disabled = true;
 	}
+	ambilRule(penyakit);
 });
+
+function ambilRule(kodePenyakit) {
+	console.log("function ambil rule = " + kodePenyakit);
+	let kesini = "http://localhost/pakar-kopi/welcome/ambilRule/" + kodePenyakit;
+	$.ajax({
+		type: "GET",
+		data: "",
+		url: kesini,
+		success: function (result) {
+			console.log(result);
+		},
+	});
+}
 
 const btnNextPrev = document.getElementById("btnNextPrev");
 btnNextPrev.addEventListener("click", function () {
 	let val = btnNextPrev.getAttribute("data-bs-slide");
-	console.log(val);
+	// console.log(val);
 	if (val == "next") {
 		btnNextPrev.setAttribute("data-bs-slide", "prev");
 		btnNextPrev.innerHTML = "Prev";
