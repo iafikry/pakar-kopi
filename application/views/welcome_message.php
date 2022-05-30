@@ -124,7 +124,7 @@
 												<label for="penyakit" class="col-sm-2 col-form-label">Piilih Penyakit</label>
 												<div class="col-sm-7">
 													<select class="form-select" id="selectPenyakit">
-														<option value="" selected>Pilih penyakt</option>
+														<option value="" selected>Pilih penyakit</option>
 														<?php foreach($penyakit->result_array() as $pn): ?>
 															<option value="<?= $pn['kd_penyakit']; ?>"><?= $pn['nama']; ?></option>
 														<?php endforeach; ?>
@@ -135,6 +135,7 @@
 									</div>
 								</div>
 							</div>
+							<p class="text-base">Gejala yang dialami:</p>
 							<div class="carousel-item">
 								<ul class="list-group border-0 bg-transparent" id="listGejala">
 

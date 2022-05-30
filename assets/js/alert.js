@@ -41,3 +41,9 @@ $(".btn-hapus").on("click", function (e) {
 		}
 	});
 });
+
+$("link-dark").on("click", function () {
+	$("link-dark").removeClass("active");
+	console.log("hapus class active");
+	$(this).addClass("active");
+});
