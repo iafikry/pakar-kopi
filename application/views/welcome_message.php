@@ -95,7 +95,7 @@
 								<img src="<?= base_url('assets/img/shadow-1.svg') ?>" alt="bayangan" id="sdwBrainstorm" class="bayangan mx-auto" width="100px">
 							</div>
 							<div class="card-body" id="cdMetode">
-								<p class="card-text">Metode yang digunakan pada penelitan ini ada 1 yaitu metode Backward Chaining dan metode TOPSIS.</p>
+								<p class="card-text">Metode yang digunakan pada penelitan ini ada 1 yaitu metode Backward Chaining.</p>
 								<a href="#page4" id="linkMetode" class="text-base">Lihat selengkapnya</a>
 							</div>
 						</div>
@@ -135,8 +135,8 @@
 									</div>
 								</div>
 							</div>
-							<p class="text-base">Gejala yang dialami:</p>
 							<div class="carousel-item">
+								<p class="text-base" id="text-gejala">Gejala yang dialami:</p>
 								<ul class="list-group border-0 bg-transparent" id="listGejala">
 
 								</ul>

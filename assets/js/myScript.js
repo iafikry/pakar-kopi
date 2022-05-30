@@ -190,7 +190,7 @@ function ambilRule(kodePenyakit) {
 			$("#listGejala").empty();
 			let dataObject = JSON.parse(result);
 			$.each(dataObject, function (i, data) {
-				content += `<li class="list-group-item"><input type="checkbox" class="form-check-input me-1" name="gejala"${i} value=${data.kode_gejala}>Apakah ${data.nama_gejala}?</li>`;
+				content += `<li class="list-group-item"><input type="checkbox" class="form-check-input me-1" name="gejala${i}" value=${data.kode_gejala}>Apakah ${data.nama_gejala}?</li>`;
 			});
 			$("#listGejala").html(content);
 		},
