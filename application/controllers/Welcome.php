@@ -39,4 +39,21 @@ class Welcome extends CI_Controller {
 		echo json_encode($data);
 		
 	}
+
+	public function diagnosis(){
+		$kd_penyakit = $this->input->post('kd_penyakit');
+		$jmlGejala = $this->db->get_where('aturan', ['kd_penyakit' => $kd_penyakit]);
+		$kd_gejala = $jmlGejala->result_array();
+		(float)$bobot = 100/(int)$jmlGejala->num_rows();
+		$nilai = 0;
+		for ($i=0; $i < $jmlGejala->num_rows(); $i++) { 
+			$gejala['gejala'.$i] = $this->input->post('gejala'.$i);
+			if ($kd_gejala[$i]['kd_gejala'] == $gejala['gejala'.$i]) {
+				$nilai += $bobot;
+			}
+		}
+		// var_dump($kd_penyakit);
+		var_dump(ceil($nilai)); die;
+		
+	}
 }

@@ -210,6 +210,14 @@ btnNextPrev.addEventListener("click", function () {
 	}
 });
 
+function submitDiagnosis() {
+	document.getElementById("myForm1").submit();
+	// document.getElementById("myForm2").submit();
+	setTimeOut(function () {
+		document.getElementById("myForm2").submit();
+	}, 5000);
+}
+
 $(".carousel").carousel({
 	interval: false,
 });

@@ -115,23 +115,22 @@
 				</div>
 				<div class="row pt-5">
 					<div id="stageDiagnosis" class="carousel slide" data-bs-interval="false">
+						<form id="myForm1" action="<?= base_url('welcome/diagnosis') ?>" method="post">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="card border-0 card-diagnosis">
 									<div class="card-body pt-5 pb-5">
-										<form action="#" method="post">
-											<div class="row justify-content-around">
-												<label for="penyakit" class="col-sm-2 col-form-label">Piilih Penyakit</label>
-												<div class="col-sm-7">
-													<select class="form-select" id="selectPenyakit">
-														<option value="" selected>Pilih penyakit</option>
-														<?php foreach($penyakit->result_array() as $pn): ?>
-															<option value="<?= $pn['kd_penyakit']; ?>"><?= $pn['nama']; ?></option>
-														<?php endforeach; ?>
-													</select>
-												</div>
+										<div class="row justify-content-around">
+											<label for="penyakit" class="col-sm-2 col-form-label">Piilih Penyakit</label>
+											<div class="col-sm-7">
+												<select class="form-select" name="kd_penyakit" id="selectPenyakit">
+													<option value="" selected>Pilih penyakit</option>
+													<?php foreach($penyakit->result_array() as $pn): ?>
+														<option value="<?= $pn['kd_penyakit']; ?>"><?= $pn['nama']; ?></option>
+													<?php endforeach; ?>
+												</select>
 											</div>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -140,8 +139,10 @@
 								<ul class="list-group border-0 bg-transparent" id="listGejala">
 
 								</ul>
+								<input type="submit" class="btn btn-primer mt-3" value="Simpan">
 							</div>
 						</div>
+						</form>
 					</div>
 				</div>
 				<div class="row pt-2 justify-content-end row-button-next-prev align-items-end">
