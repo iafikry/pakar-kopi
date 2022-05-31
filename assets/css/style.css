@@ -308,6 +308,14 @@ header {
 	footer {
 		min-height: 250px;
 	}
+	.foto-login {
+		background-image: url("../img/mariliz-lopez-unsplash.jpg");
+		background-repeat: no-repeat;
+		/* background-position: center; */
+	}
+	.login-content {
+		min-height: 700px;
+	}
 	.number-penyakit {
 		font-size: 9rem;
 		position: absolute;
