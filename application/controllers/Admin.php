@@ -30,9 +30,7 @@ class Admin extends CI_Controller
 			$data['cekRule'][$p[$i]['kd_penyakit']] = $this->db->get_where('aturan', ['kd_penyakit' => $p[$i]['kd_penyakit']])->num_rows();
 		}
 		$data['gejala'] = $this->db->get('gejala');
-		$data['rule'] = $this->AM->rule();
-		
-		
+		$data['rule'] = $this->AM->rule();		
 		$this->load->view('templates/header-admin', $data);
 		$this->load->view('templates/sidebar-admin');
 		$this->load->view('admin/rule', $data);
@@ -96,10 +94,7 @@ class Admin extends CI_Controller
 				$this->session->set_flashdata('message', 'simpan');
 				redirect('admin/rule');
 			}
-		}
-		
-		
-		
+		}	
 	}
 
 	public function ubahDataRule($kode_penyakit){
@@ -137,6 +132,16 @@ class Admin extends CI_Controller
 		$this->AM->hapusData('aturan', ['kd_penyakit' => $kode_penyakit]);
 		$this->session->set_flashdata('message', 'hapus');
 		redirect('admin/rule');
+	}
+
+	public function pengguna(){
+		$data['judul'] = 'Pengguna // ES Kopi';
+		$data['pengguna'] = $this->AM->ambilSemuaData('pengguna');
+		$this->load->view('templates/header-admin', $data);
+		$this->load->view('templates/sidebar-admin');
+		$this->load->view('admin/pengguna', $data);
+		$this->load->view('templates/footer-admin');
+
 	}
 	
 	

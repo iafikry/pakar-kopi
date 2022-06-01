@@ -25,7 +25,6 @@ class Auth extends CI_Controller
 			$this->load->view('login', $data);
 		} else {
 			echo 'sipaling oke';
-		}
-		
+		}		
 	}
 }

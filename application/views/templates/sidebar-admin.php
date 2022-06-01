@@ -33,7 +33,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link link-dark" id="menuUser" href="#">
+				<a class="nav-link link-dark" id="menuUser" href="<?= base_url('admin/pengguna') ?>">
 				<i class="bi bi-person"></i>
 				Pengguna
 				</a>
