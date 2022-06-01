@@ -293,6 +293,9 @@ header {
 		border-radius: 25px !important;
 		top: 1.5rem;
 	}
+	.card-login {
+		min-height: 560px;
+	}
 	.card-penyakit {
 		width: 23rem;
 	}
@@ -311,10 +314,14 @@ header {
 	.foto-login {
 		background-image: url("../img/mariliz-lopez-unsplash.jpg");
 		background-repeat: no-repeat;
-		/* background-position: center; */
+		background-position: center;
+		background-size: 650px;
 	}
 	.login-content {
 		min-height: 700px;
+	}
+	.login-group {
+		min-height: 560px;
 	}
 	.number-penyakit {
 		font-size: 9rem;

@@ -15,23 +15,26 @@
 	<section class="login-content d-flex flex-column justify-content-center">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="group d-flex align-items-stretch">
+				<div class="login-group d-flex align-items-stretch">
 					<div class="col-6">
-						<div class="card border-0">
-							<div class="card-body border-top">
-								<form action="" method="POST">
-									<div class="mb-3">
-										<label for="inputUsername" class="form-label">Username</label>
-										<input type="text" class="form-control <?= (form_error('username')) ? 'is-invalid' : '' ?>" id="username" name="username" value="<?= set_value('username') ?>">
-										<?= form_error('username', '<div class="invalid-feedback">', '</div>') ?>
-									</div>
-									<div class="mb-3">
-										<label for="inputPassword" class="form-label">Password</label>
-										<input type="password" class="form-control <?= (form_error('pass')) ? 'is-invalid' : '' ?>" id="pass" name="pass">
-										<?= form_error('pass', '<div class="invalid-feedback">', '</div>') ?>
-									</div>
-									<button type="submit" class="btn btn-primer">Login</button>
-								</form>
+						<div class="card card-login border-0">
+							<img src="<?= base_url('assets/img/logo fill-blue.svg') ?>" alt="logo" height="150px">
+							<div class="card-body">
+								<div class="ms-3 me-3 border-top">
+									<form action="" method="POST" class="mt-3">
+										<div class="mb-3">
+											<label for="inputUsername" class="form-label">Username</label>
+											<input type="text" class="form-control <?= (form_error('username')) ? 'is-invalid' : '' ?>" id="username" name="username" value="<?= set_value('username') ?>">
+											<?= form_error('username', '<div class="invalid-feedback">', '</div>') ?>
+										</div>
+										<div class="mb-3">
+											<label for="inputPassword" class="form-label">Password</label>
+											<input type="password" class="form-control <?= (form_error('pass')) ? 'is-invalid' : '' ?>" id="pass" name="pass">
+											<?= form_error('pass', '<div class="invalid-feedback">', '</div>') ?>
+										</div>
+										<button type="submit" class="btn btn-primer">Login</button>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
