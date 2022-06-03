@@ -143,6 +143,36 @@ class Admin extends CI_Controller
 		$this->load->view('templates/footer-admin');
 
 	}
+
+	public function tambahDataPengguna(){
+		$data['judul'] = 'Tambah pengguna // ES Kopi';
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[pengguna.username]|min_length[5]', [
+			'required' => '{field} harus diisi',
+			'is_unique' => '{field} telah digunakan',
+			'min_length' => '{field} minimal berisikan 5 karakter'
+		]);
+
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|alpha', [
+			'required' => '{field} harus diisi'
+		]);
+
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]', [
+			'required' => '{field} harus diisi', 
+			'min_length' => '{field} minimal berisikan 6 karakter'
+		]);
+		
+		
+		
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('templates/header-admin', $data);
+			$this->load->view('templates/sidebar-admin');
+			$this->load->view('admin/tambah-pengguna', $data);
+			$this->load->view('templates/footer-admin');
+		} else {
+			echo 'sipaling oke';
+		}
+		
+	}
 	
 	
 }
