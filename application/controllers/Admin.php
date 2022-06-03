@@ -161,15 +161,19 @@ class Admin extends CI_Controller
 			'min_length' => '{field} minimal berisikan 6 karakter'
 		]);
 		
-		
-		
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header-admin', $data);
 			$this->load->view('templates/sidebar-admin');
 			$this->load->view('admin/tambah-pengguna', $data);
 			$this->load->view('templates/footer-admin');
 		} else {
-			echo 'sipaling oke';
+			$this->AM->tambahData('pengguna', [
+				'username' => $this->input->post('username', true),
+				'nama' => $this->input->post('nama', true),
+				'password' => $this->input->post('password')
+			]);
+			$this->session->set_flashdata('message', 'simpan');
+			redirect('admin/pengguna');
 		}
 		
 	}
