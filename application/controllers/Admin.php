@@ -152,9 +152,9 @@ class Admin extends CI_Controller
 			'min_length' => '{field} minimal berisikan 5 karakter'
 		]);
 
-		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|alpha', [
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required', [
 			'required' => '{field} harus diisi'
-		]);
+		]); 
 
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]', [
 			'required' => '{field} harus diisi', 
@@ -168,12 +168,39 @@ class Admin extends CI_Controller
 			$this->load->view('templates/footer-admin');
 		} else {
 			$this->AM->tambahData('pengguna', [
+				'id' => $this->AM->idUser(),
 				'username' => $this->input->post('username', true),
 				'nama' => $this->input->post('nama', true),
 				'password' => $this->input->post('password')
 			]);
 			$this->session->set_flashdata('message', 'simpan');
 			redirect('admin/pengguna');
+		}
+	}
+
+	public function ubahDataPengguna($id){
+		$data['pengguna'] = $this->AM->ambilData('pengguna', ['id' => $id]);
+		$data['judul'] = "Ubah data // ES Kopi";
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]', [
+			'required' => '{field} harus diisi',
+			'min_length' => '{field} minimal berisikan 5 karakter'
+		]);
+
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required', [
+			'required' => '{field} harus diisi'
+		]); 
+
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]', [
+			'required' => '{field} harus diisi', 
+			'min_length' => '{field} minimal berisikan 6 karakter'
+		]);
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('templates/header-admin', $data);
+			$this->load->view('templates/sidebar-admin');
+			$this->load->view('admin/ubah-pengguna', $data);
+			$this->load->view('templates/footer-admin');
+		} else {
+			echo 'sipaling oke';
 		}
 		
 	}

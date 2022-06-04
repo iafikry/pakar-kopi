@@ -28,6 +28,9 @@
 						</a>
 						<a class="nav-txt-link text-light txt-menu" id="menu-tentang" href="#">Tentang</a>
 					</div>
+					<div class="row">
+						<a class="btn text-white rounded-pill border border-white" id="btnLogin" href="<?= base_url('auth') ?>">Login</a>
+					</div>
 				</div>
 			</div>
 		</nav>

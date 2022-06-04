@@ -2,18 +2,21 @@
 
 class Admin_model extends MY_Model
 {
-	// public function kodeRule(){
-	// 	$data = $this->db->select_max('kd_gejala')->get('gejala')->row_array();
-	// 	if (is_null($data['kd_gejala'])) {
-	// 		$kode = "G001";
-	// 	} else {
-	// 		(int)$id = substr($data['kd_gejala'], 1);
-	// 		$id += 1;
-	// 		$kode = "G" . str_pad($id, 3, "0", STR_PAD_LEFT);
+	public function idUser(){
+		date_default_timezone_set("Asia/Jakarta");
+		$data = $this->db->select_max('id')->get('pengguna')->row_array();
+		if (is_null($data['id'])) {
+			$kode = "0001".date("Ndnyz");
+		} else {
+			$data = substr($data['id'], 1, 12);
+			(int)$id = substr($data,1,2);
+			$id += 1;
+			$kode = str_pad($id, 4, "0", STR_PAD_LEFT).date("Ndnyz");
 
-	// 	}
-	// 	return $kode;
-	// }
+		}
+		// var_dump($kode); die;
+		return $kode;
+	}
  
 	public function rule(){
 		$this->db->select('p.nama as nama_penyakit, g.nama as nama_gejala, at.kd_penyakit as kode_penyakit');

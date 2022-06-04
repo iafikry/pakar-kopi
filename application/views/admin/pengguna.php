@@ -43,8 +43,8 @@
 											<td><?= $p['nama']; ?></td>
 											<td>
 												<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
-													<a href="<?= base_url('penyakit/ubahDataPengguna/' . $p['username']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
-													<a href="<?= base_url('penyakit/hapusDataPengguna/' . $p['username']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
+													<a href="<?= base_url('admin/ubahDataPengguna/' . $p['id']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>
+													<a href="<?= base_url('admin/hapusDataPengguna/' . $p['id']) ?>"  class="btn btn-sm btn-outline-danger btn-hapus" title="Hapus data" data-bs-toggle="tooltip" data-bs-placement="left"><i class="bi bi-trash3"></i></a>
 												</div>
 											</td>
 										</tr>

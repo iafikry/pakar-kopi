@@ -15,12 +15,16 @@ window.addEventListener("scroll", function () {
 			for (let i = 0; i < txtLink.length; i++) {
 				txtLink[i].style.color = "#FFFF";
 			}
+			$("#btnLogin").removeClass("text-white");
+			$("#btnLogin").addClass("text-base bg-white");
 		} else {
 			document.getElementById("nav-menu").style.backgroundColor = "transparent";
 			let txtLink = document.getElementsByClassName("nav-txt-link");
 			for (let i = 0; i < txtLink.length; i++) {
 				txtLink[i].style.color = "#fff";
 			}
+			$("#btnLogin").removeClass("text-base bg-white");
+			$("#btnLogin").addClass("text-white");
 		}
 	} else {
 		document.getElementById("header").style.top = "-110px";

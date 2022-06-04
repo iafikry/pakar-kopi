@@ -7,14 +7,14 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb mb-auto">
 							<li class="breadcrumb-item text-muted">Pengguna</li>
-							<li class="breadcrumb-item text-muted">Tambah data pengguna</li>
+							<li class="breadcrumb-item text-muted">Ubah data pengguna</li>
 						</ol>
 					</nav>
 				</div>
 			</div>
 			<div class="row container justify-content-between">
 				<div class="col-4">
-					<h2 class="text-base">Tambah data</h2>
+					<h2 class="text-base">Ubah data</h2>
 				</div>
 			</div>
 		</div>
@@ -24,19 +24,20 @@
 					<div class="card w-100 bg-white card-content shadow" style="bottom:3rem;">
 						<div class="card-body">
 							<form action="" method="post">
+								<input type="hidden" name="id" value="<?= $pengguna['id']; ?>" readonly>
 								<div class="row g-2 p-3">
 									<div class="col-md-3 form-floating">
-										<input type="text" class="form-control <?= (form_error('username')) ? 'is-invalid' : '' ?>" id="username" placeholder="Username" name="username" value="<?= set_value('username') ?>" autocomplete="off">
+										<input type="text" class="form-control <?= (form_error('username')) ? 'is-invalid' : '' ?>" id="username" placeholder="Username" name="username" value="<?= $pengguna['username']; ?>" autocomplete="off">
 										<label class="text-muted" for="floatingInputValue">Username</label>
 										<?= form_error('username','<div class="invalid-feedback">','</div>') ?>
 									</div>
 									<div class="col-md-6 form-floating">
-										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama" name="nama" value="<?= set_value('nama') ?>" autocomplete="off">
+										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama" name="nama" value="<?= $pengguna['nama'] ?>" autocomplete="off">
 										<label class="text-muted" for="floatingInputNama">Nama</label>
 										<?= form_error('nama','<div class="invalid-feedback">','</div>') ?>
 									</div>
 									<div class="col-md-3 form-floating">
-										<input type="password" class="form-control <?= (form_error('password')) ? 'is-invalid' : '' ?>" id="password" placeholder="Password" name="password" autocomplete="off">
+										<input type="password" class="form-control <?= (form_error('password')) ? 'is-invalid' : '' ?>" id="password" placeholder="Password" name="password" autocomplete="off" value="<?= $pengguna['password']; ?>">
 										<label class="text-muted" for="floatingInputPassword">Password</label>
 										<?= form_error('password','<div class="invalid-feedback">','</div>') ?>
 									</div>
