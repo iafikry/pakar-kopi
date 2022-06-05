@@ -26,6 +26,34 @@ if (flashData) {
 			timer: 2000,
 			timerProgressBar: true,
 		});
+	} else if (flashData == "salah") {
+		Swal.fire({
+			icon: "error",
+			text: "Username/Password salah",
+			timer: 2000,
+			timerProgressBar: true,
+		});
+	} else if (flashData == "unknown") {
+		Swal.fire({
+			icon: "error",
+			text: "Pengguna tidak ditemukan",
+			timer: 2000,
+			timerProgressBar: true,
+		});
+	} else if (flashData == "masuk") {
+		Swal.fire({
+			icon: "success",
+			text: "Selamat datang!",
+			timer: 2000,
+			timerProgressBar: true,
+		});
+	} else if (flashData == "keluar") {
+		Swal.fire({
+			icon: "success",
+			text: "Anda berhasil keluar!",
+			timer: 2000,
+			timerProgressBar: true,
+		});
 	}
 }
 

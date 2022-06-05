@@ -32,8 +32,7 @@
 						<img src="<?= base_url('assets/img/virus.png')  ?>" alt="biji kopi" width="88">
 					</div>
 					<div class="card-body position-relative card-body-dashboard">
-						<h5 class="card-title">Lorem, ipsum dolor.</h5>
-						<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit magni odit sapiente cupiditates.</p>
+						<p class="card-text">Pada sisitem ini terdapat <?= $gejala->num_rows(); ?> gejala yang menjadi faktor acuan untuk mendiagnosa sebuah penyakit.</p>
 					</div>
 				</div>
 				<div class="card border-0 card-content bg-blue-2" style="width: 18rem;">
@@ -41,8 +40,7 @@
 						<img src="<?= base_url('assets/img/brainstorming.png') ?>" alt="biji kopi" width="88">
 					</div>
 					<div class="card-body position-relative card-body-dashboard">
-						<h5 class="card-title">Lorem, ipsum dolor.</h5>
-						<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit magni odit sapiente cupiditates.</p>
+						<p class="card-text">Metode yang digunakan pada penelitan ini ada 1 yaitu metode Backward Chaining.</p>
 					</div>
 				</div>
 			</div>

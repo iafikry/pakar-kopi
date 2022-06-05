@@ -43,11 +43,11 @@
 			<div class="py-1 border-top"></div>
 			<a href="#" class="d-flex align-items-center text-base text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 				<img src="<?= base_url('assets/img/profile.png') ?>" alt="" width="32" height="32" class="rounded-circle me-2" />
-				<strong>User</strong>
+				<strong><?= $this->session->userdata('nama'); ?></strong>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-				<li><a class="dropdown-item" href="#">Profile</a></li>
-				<li><a class="dropdown-item" href="#">Sign out</a></li>
+				<li><a class="dropdown-item" href="<?= base_url('admin/ubahDataPengguna/'.$this->session->userdata('id')) ?>">Profile</a></li>
+				<li><a class="dropdown-item" href="<?= base_url('auth/logout') ?>">Logout</a></li>
 			</ul>
 		</div>
 	</aside>

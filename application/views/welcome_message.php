@@ -23,8 +23,8 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav mx-auto text-light">
-						<a class="nav-txt-link text-light txt-menu" id="menu-diagnosis" aria-current="page" href="#">Diagnosis</a>
-						<a class="nav-txt-link text-light txt-menu" id="menu-informasi" href="#">Informasi
+						<a class="nav-txt-link text-light txt-menu" id="menu-diagnosis" aria-current="page" href="#page3">Diagnosis</a>
+						<a class="nav-txt-link text-light txt-menu" id="menu-informasi" href="#page2">Informasi
 						</a>
 						<a class="nav-txt-link text-light txt-menu" id="menu-tentang" href="#">Tentang</a>
 					</div>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="row pt-3 justify-content-center">
 					<div class="col-2 d-flex justify-content-center">
-						<a href="#" class="btn btn-lg btn-primer">Mulai!</a>
+						<a href="#page3" class="btn btn-lg btn-primer">Mulai!</a>
 					</div>
 				</div>
 				<div class="row d-flex flex-row align-items-center justify-content-evenly position-relative z-2 div-info">
@@ -255,14 +255,21 @@
 	  </main>
 	  <footer>
 		  <div class="container">
-			  <div class="row pt-5">
-				  <div class="col-3">
-					 <img src="<?= base_url('assets/img/logo fill - white.svg') ?>" alt="logo" height="80" class="d-inline-block" style="fill: #fffff;">
-				  </div>
-			  </div>
 			  <div class="row">
-				  <div class="col-4">
-					  <p class="text-light">&copy; 2022 ES Kopi | Sistem Pakar Tanaman Kopi</p>
+				  <div class="col-md-6">
+					  <div class="row pt-5">
+						  <div class="col-3">
+							 <img src="<?= base_url('assets/img/logo fill - white.svg') ?>" alt="logo" height="80" class="d-inline-block" style="fill: #fffff;">
+						  </div>
+					  </div>
+					  <div class="row">
+						  <div class="col-4">
+							  <p class="text-light">&copy; 2022 ES Kopi | Sistem Pakar Tanaman Kopi</p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="col-md-6 d-flex flex-row-reverse">
+					  <img src="<?= base_url('assets/img/logo-stmik.png') ?>" alt="logo-stmik-horizon" height="200px" class="logoHorizon pt-5">
 				  </div>
 			  </div>
 		  </div>
