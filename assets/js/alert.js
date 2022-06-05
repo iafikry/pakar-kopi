@@ -18,6 +18,14 @@ if (flashData) {
 			timer: 2000,
 			timerProgressBar: true,
 		});
+	} else if (flashData == "gagalHapus") {
+		Swal.fire({
+			icon: "error",
+			title: "Gagal",
+			text: "Data tidak terhapus",
+			timer: 2000,
+			timerProgressBar: true,
+		});
 	}
 }
 

@@ -156,9 +156,14 @@ class Admin extends CI_Controller
 			'required' => '{field} harus diisi'
 		]); 
 
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]', [
+		$this->form_validation->set_rules('pass1', 'Password', 'trim|required|min_length[6]|matches[pass2]', [
 			'required' => '{field} harus diisi', 
-			'min_length' => '{field} minimal berisikan 6 karakter'
+			'min_length' => '{field} minimal berisikan 6 karakter',
+			'matches' => '{field} tidak sama'
+		]);
+		$this->form_validation->set_rules('pass2', 'Password', 'trim|required|matches[pass1]', [
+			'required' => '{field} harus diisi', 
+			'matches' => '{field} tidak sama'
 		]);
 		
 		if ($this->form_validation->run() == FALSE) {
@@ -171,7 +176,8 @@ class Admin extends CI_Controller
 				'id' => $this->AM->idUser(),
 				'username' => $this->input->post('username', true),
 				'nama' => $this->input->post('nama', true),
-				'password' => $this->input->post('password')
+				'password' => $this->input->post('pass1'),
+				'role' => 'pakar'
 			]);
 			$this->session->set_flashdata('message', 'simpan');
 			redirect('admin/pengguna');
@@ -190,10 +196,16 @@ class Admin extends CI_Controller
 			'required' => '{field} harus diisi'
 		]); 
 
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]', [
+		$this->form_validation->set_rules('pass1', 'Password', 'trim|required|min_length[6]|matches[pass2]', [
 			'required' => '{field} harus diisi', 
-			'min_length' => '{field} minimal berisikan 6 karakter'
+			'min_length' => '{field} minimal berisikan 6 karakter',
+			'matches' => '{field} tidak sama'
 		]);
+		$this->form_validation->set_rules('pass2', 'Password', 'trim|required|matches[pass1]', [
+			'required' => '{field} harus diisi', 
+			'matches' => '{field} tidak sama'
+		]);
+
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header-admin', $data);
 			$this->load->view('templates/sidebar-admin');
@@ -209,10 +221,15 @@ class Admin extends CI_Controller
 			redirect('admin/pengguna');
 		}	
 	}
-	
+
 	public function hapusDataPengguna($id){
-		$this->AM->hapusData('pengguna', ['id' => $id]);
-		$this->session->set_flashdata('message', 'hapus');
+		$pengguna = $this->db->get_where('pengguna', ['id' => $id])->row_array();
+		if ($pengguna['role'] == 'superAdmin') {
+			$this->session->set_flashdata('message', 'gagalHapus');
+		} else {
+			$this->AM->hapusData('pengguna', ['id' => $id]);
+			$this->session->set_flashdata('message', 'hapus');
+		}
 		redirect('admin/pengguna');
 	}	
 }

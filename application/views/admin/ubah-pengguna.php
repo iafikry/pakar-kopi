@@ -24,22 +24,31 @@
 					<div class="card w-100 bg-white card-content shadow" style="bottom:3rem;">
 						<div class="card-body">
 							<form action="" method="post">
-								<input type="hidden" name="id" value="<?= $pengguna['id']; ?>" readonly>
+								<input type="hidden" name="idPengguna" value="<?= $pengguna['id']; ?>" readonly>
 								<div class="row g-2 p-3">
-									<div class="col-md-3 form-floating">
-										<input type="text" class="form-control <?= (form_error('username')) ? 'is-invalid' : '' ?>" id="username" placeholder="Username" name="username" value="<?= $pengguna['username']; ?>" autocomplete="off">
+									<div class="col-md-4 form-floating">
+										<input type="text" class="form-control <?= (form_error('username')) ? 'is-invalid' : '' ?>" id="username" placeholder="Username" name="username" value="<?= $pengguna['username'] ?>">
 										<label class="text-muted" for="floatingInputValue">Username</label>
 										<?= form_error('username','<div class="invalid-feedback">','</div>') ?>
 									</div>
-									<div class="col-md-6 form-floating">
-										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama" name="nama" value="<?= $pengguna['nama'] ?>" autocomplete="off">
-										<label class="text-muted" for="floatingInputNama">Nama</label>
+									<div class="col-md-8 form-floating">
+										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama" name="nama" value="<?= $pengguna['nama'] ?>">
+										<label class="text-muted" for="floatingInputNamaPenyakit">Nama</label>
 										<?= form_error('nama','<div class="invalid-feedback">','</div>') ?>
 									</div>
-									<div class="col-md-3 form-floating">
-										<input type="password" class="form-control <?= (form_error('password')) ? 'is-invalid' : '' ?>" id="password" placeholder="Password" name="password" autocomplete="off" value="<?= $pengguna['password']; ?>">
+								</div>
+								<div class="row g-2 p-3">
+									<div class="col-md-12 form-floating">
+										<input type="password" name="pass1" id="pass1" class="form-control <?= (form_error('pass1')) ? 'is-invalid' : '' ?>" placeholder="Password" value="<?= $pengguna['password']; ?>">
 										<label class="text-muted" for="floatingInputPassword">Password</label>
-										<?= form_error('password','<div class="invalid-feedback">','</div>') ?>
+										<?= form_error('pass1','<div class="invalid-feedback">','</div>') ?>
+									</div>
+								</div>
+								<div class="row g-2 p-3">
+									<div class="col-md-12 form-floating">
+										<input type="password" name="pass2" id="pass2" class="form-control <?= (form_error('pass2')) ? 'is-invalid' : '' ?>" placeholder="Ketik ulang password" value="<?= $pengguna['password']; ?>">
+										<label class="text-muted" for="floatingInputPassword">Ketik ulang password</label>
+										<?= form_error('pass2','<div class="invalid-feedback">','</div>') ?>
 									</div>
 								</div>
 								<div class="row p-3">
