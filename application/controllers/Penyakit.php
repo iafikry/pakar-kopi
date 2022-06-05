@@ -73,7 +73,6 @@ class Penyakit extends CI_Controller
 		$this->PM->hapusData($tabel = 'penyakit', ['kd_penyakit' => $kodePenyakit]);
 		$this->session->set_flashdata('message', 'hapus');
 		redirect('penyakit');
-	}
-	
+	}	
 }
 

@@ -200,11 +200,20 @@ class Admin extends CI_Controller
 			$this->load->view('admin/ubah-pengguna', $data);
 			$this->load->view('templates/footer-admin');
 		} else {
-			echo 'sipaling oke';
-		}
-		
+			$this->AM->perbaruiData('pengguna', [
+				'username' => $this->input->post('username', true),
+				'nama' => $this->input->post('nama', true),
+				'password' => $this->input->post('password'),
+			], ['id' => $id]);
+			$this->session->set_flashdata('message', 'simpan');
+			redirect('admin/pengguna');
+		}	
 	}
 	
-	
+	public function hapusDataPengguna($id){
+		$this->AM->hapusData('pengguna', ['id' => $id]);
+		$this->session->set_flashdata('message', 'hapus');
+		redirect('admin/pengguna');
+	}	
 }
 
