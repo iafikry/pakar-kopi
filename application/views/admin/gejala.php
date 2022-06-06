@@ -30,7 +30,6 @@
 										<tr>
 											<th scope="col">Kode gejala</th>
 											<th scope="col">Gejala</th>
-											<th scope="col">Bobot</th>
 											<th scope="col">Opsi</th>
 										</tr>
 									</thead>
@@ -40,7 +39,6 @@
 										<tr>
 											<td><?= $g['kd_gejala']; ?></td>
 											<td><?= $g['nama']; ?></td>
-											<td><?= $g['bobot']; ?></td>
 											<td>
 												<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
 													<a href="<?= base_url('gejala/ubahDataGejala/' . $g['kd_gejala']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>

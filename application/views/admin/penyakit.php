@@ -29,8 +29,9 @@
 									<thead>
 										<tr>
 											<th scope="col">Kode penyakit</th>
-											<th scope="col">Nama penyakt</th>
+											<th scope="col">Nama penyakit</th>
 											<th scope="col">Keterangan</th>
+											<th scope="col">Solusi</th>
 											<th scope="col">Opsi</th>
 										</tr>
 									</thead>
@@ -41,6 +42,7 @@
 											<td><?= $p['kd_penyakit']; ?></td>
 											<td><?= $p['nama']; ?></td>
 											<td><?= $p['ket']; ?></td>
+											<td><?= $p['solusi']; ?></td>
 											<td>
 												<div class="btn-group btn-group-sm" role="group" aria-label="Option button">
 													<a href="<?= base_url('penyakit/ubahDataPenyakit/' . $p['kd_penyakit']) ?>"  class="btn btn-sm btn-outline-primer border-end-0" title="Ubah data" data-bs-toggle="tooltip" data-bs-placement="right"><i class="bi bi-pencil-square"></i></a>

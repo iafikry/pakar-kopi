@@ -28,6 +28,13 @@ class Penyakit extends CI_Controller
 		$this->form_validation->set_rules('nama', 'Nama penyakit', 'trim|required', [
 			'required' => '{field} harus diisi!'
 		]);
+		$this->form_validation->set_rules('ket', 'Keterangan', 'trim|required', [
+			'required' => '{field} harus diisi'
+		]);
+		$this->form_validation->set_rules('solusi', 'Solusi', 'trim|required', [
+			'required' => '{field} harus diisi'
+		]);
+		
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header-admin', $data);
 			$this->load->view('templates/sidebar-admin');
@@ -37,7 +44,8 @@ class Penyakit extends CI_Controller
 			$this->PM->tambahData('penyakit', [
 				'kd_penyakit' => $this->input->post('kd_penyakit'),
 				'nama' => $this->input->post('nama'),
-				'ket' => $this->input->post('ket')
+				'ket' => $this->input->post('ket'),
+				'solusi' => $this->input->post('solusi')
 			]);
 			$this->session->set_flashdata('message', 'simpan');
 			redirect('penyakit');
@@ -54,6 +62,12 @@ class Penyakit extends CI_Controller
 		$this->form_validation->set_rules('nama', 'Nama penyakit', 'trim|required', [
 			'required' => '{field} harus diisi!'
 		]);
+		$this->form_validation->set_rules('ket', 'Keterangan', 'trim|required', [
+			'required' => '{field} harus diisi'
+		]);
+		$this->form_validation->set_rules('solusi', 'Solusi', 'trim|required', [
+			'required' => '{field} harus diisi'
+		]);
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header-admin', $data);
 			$this->load->view('templates/sidebar-admin');
@@ -62,7 +76,8 @@ class Penyakit extends CI_Controller
 		} else {
 			$this->PM->perbaruiData($tabel='penyakit', [
 				'nama' => $this->input->post('nama'),
-				'ket' => $this->input->post('ket')
+				'ket' => $this->input->post('ket'),
+				'solusi' => $this->input->post('solusi')
 			], ['kd_penyakit' =>$kodePenyakit]);
 			$this->session->set_flashdata('message', 'simpan');
 			redirect('penyakit');

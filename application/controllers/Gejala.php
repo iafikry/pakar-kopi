@@ -33,9 +33,6 @@ class Gejala extends CI_Controller
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required', [
 			'required' => '{field} harus diisi',
 		]);
-		$this->form_validation->set_rules('bobot', 'Bobot', 'required', [
-			'required' => '{field} harus diisi!'
-		]);
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header-admin', $data);
 			$this->load->view('templates/sidebar-admin');
@@ -44,8 +41,7 @@ class Gejala extends CI_Controller
 		} else {
 			$this->GM->tambahData('gejala', [
 				'kd_gejala' => $this->input->post('kd_gejala'),
-				'nama' => $this->input->post('nama'),
-				'bobot' => $this->input->post('bobot'),
+				'nama' => $this->input->post('nama')
 			]);
 			$this->session->set_flashdata('message', 'simpan');
 			redirect('gejala');
@@ -66,9 +62,6 @@ class Gejala extends CI_Controller
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required', [
 			'required' => '{field} harus diisi',
 		]);
-		$this->form_validation->set_rules('bobot', 'Bobot', 'required', [
-			'required' => '{field} harus diisi!'
-		]);
 		
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header-admin', $data);
@@ -77,8 +70,7 @@ class Gejala extends CI_Controller
 			$this->load->view('templates/footer-admin');
 		} else {
 			$this->GM->perbaruiData('gejala', [
-				'nama' => $this->input->post('nama'),
-				'bobot' => $this->input->post('bobot')
+				'nama' => $this->input->post('nama')
 			], ['kd_gejala' => $kodeGejala]);
 			$this->session->set_flashdata('message', 'simpan');
 			redirect('gejala');

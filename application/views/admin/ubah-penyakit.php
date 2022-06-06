@@ -38,8 +38,16 @@
 								</div>
 								<div class="row g-2 p-3">
 									<div class="col-md-12 form-floating">
-										<textarea class="form-control" placeholder="Keterangan" name="ket" id="ket" style="height: 100px"><?= $penyakit['ket']; ?></textarea>
+										<textarea class="form-control <?= (form_error('ket')) ? 'is-invalid' : '' ?>" placeholder="Keterangan" name="ket" id="ket" style="height: 100px"><?= $penyakit['ket']; ?></textarea>
+										<?= form_error('ket','<div class="invalid-feedback">','</div>') ?>
 										<label class="text-muted" for="floatingInputKeteranganPenyakit">Keterangan</label>
+									</div>
+								</div>
+								<div class="row g-2 p-3">
+									<div class="col-md-12 form-floating">
+										<textarea class="form-control <?= (form_error('solusi')) ? 'is-invalid' : '' ?>" placeholder="Solusi" name="solusi" id="solusi" style="height: 100px"><?= $penyakit['solusi'] ?></textarea>
+										<?= form_error('solusi','<div class="invalid-feedback">','</div>') ?>
+										<label class="text-muted" for="floatingInputSolusiPenyakit">Solusi</label>
 									</div>
 								</div>
 								<div class="row p-3">

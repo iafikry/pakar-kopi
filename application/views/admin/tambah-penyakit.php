@@ -42,6 +42,12 @@
 										<label class="text-muted" for="floatingInputKeteranganPenyakit">Keterangan</label>
 									</div>
 								</div>
+								<div class="row g-2 p-3">
+									<div class="col-md-12 form-floating">
+										<textarea class="form-control" placeholder="Solusi" name="solusi" id="solusi" style="height: 100px"><?= set_value('solusi') ?></textarea>
+										<label class="text-muted" for="floatingInputSolusiPenyakit">Solusi</label>
+									</div>
+								</div>
 								<div class="row p-3">
 									<div class="col-md-2">
 										<button type="submit" class="btn btn-primer">Submit</button>
