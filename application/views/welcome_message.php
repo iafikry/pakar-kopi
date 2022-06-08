@@ -118,7 +118,7 @@
 				</div>
 				<div class="row pt-5">
 					<div id="stageDiagnosis" class="carousel slide" data-bs-interval="false">
-						<form id="myForm1" action="<?= base_url('welcome/diagnosis') ?>" method="post">
+						<form id="formDiagnosa" action="<?= base_url('welcome/diagnosis') ?>" method="post">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="card border-0 card-diagnosis">
@@ -142,7 +142,7 @@
 								<ul class="list-group border-0 bg-transparent" id="listGejala">
 
 								</ul>
-								<input type="submit" class="btn btn-primer mt-3" value="Simpan">
+								<input type="submit" id="btnFormDiagnosa" class="btn btn-primer mt-3" value="Simpan">
 							</div>
 						</div>
 						</form>
@@ -166,6 +166,28 @@
 					</div> -->
 				</div>
 			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="modalDiagnosis" data-bs-backdrop="static" tabindex="-1" aria-labelledby="labelModalDiagnosis" aria-hidden="true">
+				<div class="modal-dialog  modal-xl modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header justify-content-center">
+							<h5 class="modal-title" id="labelModalDiagnosis">Hasil Diagnosa</h5>
+						</div>
+						<div class="modal-body" id="bodyModalDiagnosis">
+							<p class="text-base">Gejala yang dipilih:</p>
+							<ol class="list-group list-group-numbered" id="listModalDiagnosa">
+								
+							</ol>
+							<div class="row" id="rowContentModalDiagnosa">
+								
+							</div>
+						<div class="modal-footer justify-content-center">
+							<button type="button" id="btnCloseModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- akhir modal -->
 		</section>
 		<section id="page4">
 			<div class="bg-page4 position-relative z-0 d-flex align-items-center">

@@ -27,10 +27,22 @@ class Welcome extends CI_Controller {
 	}
 	
 	public function index()
-	{
+	{	
+		// $this->load->library('form_validation');
 		$data['penyakit'] = $this->db->get('penyakit');
 		$data['gejala'] = $this->db->get('gejala');
+		// $this->form_validation->set_rules('kd_penyakit', 'Penyakit', 'trim|required', [
+		// 	'required' => '{field} harus diisi'
+		// ]);
+		
 		$this->load->view('welcome_message', $data);
+		// if ($this->form_validation->run() == FALSE) {
+		// 	$data['nilai'] = null;
+		// 	$this->load->view('welcome_message', $data);
+		// } else {
+		// 	$data['nilai'] = $this->diagnosis();
+		// 	$this->load->view('welcome_message', $data);
+		// }
 	}
 
 	public function ambilRule($kodePenyakit){
@@ -46,14 +58,16 @@ class Welcome extends CI_Controller {
 		$kd_gejala = $jmlGejala->result_array();
 		(float)$bobot = 100/(int)$jmlGejala->num_rows();
 		$nilai = 0;
+		$x =0;
 		for ($i=0; $i < $jmlGejala->num_rows(); $i++) { 
 			$gejala['gejala'.$i] = $this->input->post('gejala'.$i);
 			if ($kd_gejala[$i]['kd_gejala'] == $gejala['gejala'.$i]) {
+				$data['gejala'][$x++] = $this->db->get_where('gejala', ['kd_gejala' => $gejala['gejala'.$i]])->row_array();
 				$nilai += $bobot;
 			}
 		}
-		// var_dump($kd_penyakit);
-		var_dump(ceil($nilai)); die;
-		
+		$data['namaPenyakit'] = $this->db->get_where('penyakit', ['kd_penyakit' => $kd_penyakit])->row_array();
+		$data['nilai'] = $nilai;
+		echo json_encode($data);		
 	}
 }

@@ -193,13 +193,74 @@ function ambilRule(kodePenyakit) {
 			let content = "";
 			$("#listGejala").empty();
 			let dataObject = JSON.parse(result);
+			// console.log(dataObject);
 			$.each(dataObject, function (i, data) {
-				content += `<li class="list-group-item"><input type="checkbox" class="form-check-input me-1" name="gejala${i}" value=${data.kode_gejala}>Apakah ${data.nama_gejala}?</li>`;
+				content += `<li class="list-group-item">
+				<input type="checkbox" class="form-check-input me-1" name="gejala${i}" value=${data.kode_gejala}>Apakah ${data.nama_gejala}?
+				</li>`;
 			});
 			$("#listGejala").html(content);
 		},
 	});
 }
+
+function loadModal() {
+	$("#exampleModal").modal("show");
+}
+
+$("#formDiagnosa").submit(function (e) {
+	e.preventDefault();
+	let urlAction = $(this).attr("action");
+	// let urlAction = "http://localhost/pakar-kopi/welcome/diagnosis";
+	let tipe = $(this).attr("method");
+	$.ajax({
+		type: tipe,
+		url: urlAction,
+		data: $(this).serialize(),
+		success: function (result) {
+			let list = "";
+			$("#listModalDiagnosa").empty();
+			let hasilObject = JSON.parse(result);
+			// console.log(hasilObject);
+			let listGejala = hasilObject.gejala; //ambil gejala yang dipilihnya aja
+			$.each(listGejala, function (i, dataGejala) {
+				list += `<li class="list-group-item border-0">${dataGejala.nama}</li><input type="hidden" name="gejala${i}" value="${dataGejala.kd_gejala}" readonly>`;
+			});
+			$("#listModalDiagnosa").html(list); //masukin gejala yang udah diplih user ke list
+
+			$("#rowContentModalDiagnosa").empty(); //ngosongin row buat konten penyakit/keterangan penyakit tidak sesuai
+			let content = "";
+			let penyakit = hasilObject.namaPenyakit;
+			if (hasilObject.nilai == "100") {
+				content += `<div class="row g-3">
+								<div class="col-md-4">
+									<label class="form-label">Kode Penyakit</label>
+									<input type="text" class="form-control text-base" id="kd_penyakit" name="kd_penyakit" value="${penyakit.kd_penyakit}" readonly>
+								</div>
+								<div class="col-md-8">
+									<label class="form-label">Nama Penyakit</label>
+									<input type="text" class="form-control text-base" id="namaPenyakit" name="namaPenyakit" value="${penyakit.nama}" readonly>
+								</div>
+							</div>
+							<div class="row g-3">
+								<div class="col">
+									<label class="form-label">Solusi</label>
+									<textarea name="solusi" id="solusi" class="form-control text-base" readonly>${penyakit.solusi}</textarea>
+								</div>
+							</div>`;
+			} else {
+				content += `<div class="row g-3">
+									<div class="col">
+										<label class="form-label">Kesimpulan:</label>
+										<textarea name="solusi" id="solusi" class="form-control text-base" readonly>Gejala yang dipilih tidak sesuai dengan penyakit ${penyakit.nama}</textarea>
+									</div>
+							</div>`;
+			}
+			$("#rowContentModalDiagnosa").html(content);
+			$("#modalDiagnosis").modal("show");
+		},
+	});
+});
 
 const btnNextPrev = document.getElementById("btnNextPrev");
 btnNextPrev.addEventListener("click", function () {
@@ -213,14 +274,6 @@ btnNextPrev.addEventListener("click", function () {
 		btnNextPrev.innerHTML = "Next";
 	}
 });
-
-function submitDiagnosis() {
-	document.getElementById("myForm1").submit();
-	// document.getElementById("myForm2").submit();
-	setTimeOut(function () {
-		document.getElementById("myForm2").submit();
-	}, 5000);
-}
 
 $(".carousel").carousel({
 	interval: false,
