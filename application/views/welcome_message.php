@@ -168,7 +168,7 @@
 			</div>
 			<!-- Modal -->
 			<div class="modal fade" id="modalDiagnosis" data-bs-backdrop="static" tabindex="-1" aria-labelledby="labelModalDiagnosis" aria-hidden="true">
-				<div class="modal-dialog  modal-xl modal-dialog-centered">
+				<div class="modal-dialog  modal-xl modal-dialog-centered modal-dialog-scrollable">
 					<div class="modal-content">
 						<div class="modal-header justify-content-center">
 							<h5 class="modal-title" id="labelModalDiagnosis">Hasil Diagnosa</h5>
@@ -181,8 +181,8 @@
 							<div class="row" id="rowContentModalDiagnosa">
 								
 							</div>
-						<div class="modal-footer justify-content-center">
-							<button type="button" id="btnCloseModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<div class="modal-footer justify-content-start">
+							<button type="button" id="btnCloseModal" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
 						</div>
 					</div>
 				</div>

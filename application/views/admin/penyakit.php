@@ -15,7 +15,13 @@
 					<h2 class="text-base">Penyakit</h2>
 				</div>
 				<div class="col-4 d-flex justify-content-end align-items-center">
-					<a href="<?= base_url('penyakit/tambahDataPenyakit') ?>" class="btn align-content-center btn-primer" title="Tambah penyakit" data-bs-toggle="tooltip" data-bs-placement="top">Tambah data</a>
+					<?php if($penyakit->num_rows() == 7): ?>
+						<span class="d-inline-block" title="Maksimal 7 penyakit" data-bs-toggle="tooltip" data-bs-placement="top">
+							<button type="button" class="btn align-content-center btn-primer" disabled>Tambah data</button>
+						</span>
+					<?php else: ?>
+						<a href="<?= base_url('penyakit/tambahDataPenyakit') ?>" class="btn align-content-center btn-primer" title="Tambah penyakit" data-bs-toggle="tooltip" data-bs-placement="top">Tambah data</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

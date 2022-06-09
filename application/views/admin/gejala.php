@@ -15,7 +15,13 @@
 					<h2 class="text-base">Gejala</h2>
 				</div>
 				<div class="col-4 d-flex justify-content-end align-items-center">
-					<a href="<?= base_url('gejala/tambahDataGejala') ?>" class="btn align-content-center btn-primer" title="Tambah gejala" data-bs-toggle="tooltip" data-bs-placement="top">Tambah data</a>
+					<?php if($gejala->num_rows() == 14): ?>
+						<span class="d-inline-block" title="Maksimal 14 gejala" data-bs-toggle="tooltip" data-bs-placement="top">
+							<button type="button" class="btn align-content-center btn-primer" disabled>Tambah data</button>
+						</span>
+					<?php else: ?>
+						<a href="<?= base_url('gejala/tambahDataGejala') ?>" class="btn align-content-center btn-primer" title="Tambah gejala" data-bs-toggle="tooltip" data-bs-placement="top">Tambah data</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

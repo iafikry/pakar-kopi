@@ -215,7 +215,7 @@ class Admin extends CI_Controller
 			$this->AM->perbaruiData('pengguna', [
 				'username' => $this->input->post('username', true),
 				'nama' => $this->input->post('nama', true),
-				'password' => $this->input->post('password'),
+				'password' => $this->input->post('pass1'),
 			], ['id' => $id]);
 			$this->session->set_flashdata('message', 'simpan');
 			redirect('admin/pengguna');

@@ -31,7 +31,7 @@
 										<?= form_error('kd_gejala','<div class="invalid-feedback">','</div>') ?>
 									</div>
 									<div class="col-md-9 form-floating">
-										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama gejala" name="nama" value="<?= set_value('nama') ?>">
+										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama gejala" name="nama" value="<?= set_value('nama') ?>" autocomplete="off">
 										<label class="text-muted" for="floatingInputNamaGejala">Nama gejala</label>
 										<?= form_error('nama','<div class="invalid-feedback">','</div>') ?>
 									</div>

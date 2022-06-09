@@ -244,8 +244,14 @@ $("#formDiagnosa").submit(function (e) {
 							</div>
 							<div class="row g-3">
 								<div class="col">
+									<label class="form-label">Keterangan</label>
+									<textarea name="ket" row="10" id="ket" class="form-control text-base" readonly>${penyakit.ket}</textarea>
+								</div>
+							</div>
+							<div class="row g-3">
+								<div class="col">
 									<label class="form-label">Solusi</label>
-									<textarea name="solusi" id="solusi" class="form-control text-base" readonly>${penyakit.solusi}</textarea>
+									<textarea name="solusi" row="10" id="solusi" class="form-control text-base" readonly>${penyakit.solusi}</textarea>
 								</div>
 							</div>`;
 			} else {

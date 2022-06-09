@@ -31,7 +31,7 @@
 										<?= form_error('kd_penyakit','<div class="invalid-feedback">','</div>') ?>
 									</div>
 									<div class="col-md-10 form-floating">
-										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama penyakit" name="nama" value="<?= $penyakit['nama']; ?>">
+										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama penyakit" name="nama" value="<?= $penyakit['nama']; ?>" autocomplete="off">
 										<label class="text-muted" for="floatingInputNamaPenyakit">Nama penyakit</label>
 										<?= form_error('nama','<div class="invalid-feedback">','</div>') ?>
 									</div>

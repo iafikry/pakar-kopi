@@ -31,14 +31,14 @@
 										<?= form_error('kd_penyakit','<div class="invalid-feedback">','</div>') ?>
 									</div>
 									<div class="col-md-10 form-floating">
-										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama penyakit" name="nama" value="<?= set_value('nama') ?>">
+										<input type="text" class="form-control <?= (form_error('nama')) ? 'is-invalid' : '' ?>" id="nama" placeholder="Nama penyakit" name="nama" value="<?= set_value('nama') ?>" autocomplete="off">
 										<label class="text-muted" for="floatingInputNamaPenyakit">Nama penyakit</label>
 										<?= form_error('nama','<div class="invalid-feedback">','</div>') ?>
 									</div>
 								</div>
 								<div class="row g-2 p-3">
 									<div class="col-md-12 form-floating">
-										<textarea class="form-control" placeholder="Keterangan" name="ket" id="ket" style="height: 100px"><?= set_value('ket') ?></textarea>
+										<textarea class="form-control" placeholder="Keterangan" name="ket" id="ket" style="height: 100px" autocomplete="off"><?= set_value('ket') ?></textarea>
 										<label class="text-muted" for="floatingInputKeteranganPenyakit">Keterangan</label>
 									</div>
 								</div>

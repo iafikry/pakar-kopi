@@ -22,7 +22,13 @@
 				<div class="login-group d-flex align-items-stretch">
 					<div class="col-6">
 						<div class="card card-login border-0">
-							<img src="<?= base_url('assets/img/logo fill-blue.svg') ?>" alt="logo" height="150px">
+							<div class="row justify-content-center">
+								<div class="col-3">
+									<a href="<?= base_url() ?>">
+										<img src="<?= base_url('assets/img/logo fill-blue.svg') ?>" alt="logo" height="150px">
+									</a>
+								</div>
+							</div>
 							<div class="card-body">
 								<div class="ms-3 me-3 border-top">
 									<form action="" method="POST" class="mt-3">
@@ -38,6 +44,9 @@
 										</div>
 										<button type="submit" class="btn btn-primer">Login</button>
 									</form>
+									<div class="mt-5">
+										<a href="<?= base_url() ?>" class="text-decoration-none"><i class="bi bi-arrow-left"></i> Kembali</a>
+									</div>
 								</div>
 							</div>
 						</div>
