@@ -14,7 +14,7 @@
 		}
 		table{
 			border-collapse: collapse;
-			width: 60%;
+			width: 100%;
 			text-indent: initial;
 			border: 1px solid #dee2e6;
 		}
