@@ -233,6 +233,7 @@ $("#formDiagnosa").submit(function (e) {
 			let penyakit = hasilObject.namaPenyakit;
 			if (hasilObject.nilai == "100") {
 				content += `<div class="row g-3">
+								<input type="hidden" name="nilai" value="${hasilObject.nilai}" readonly>
 								<div class="col-md-4">
 									<label class="form-label">Kode Penyakit</label>
 									<input type="text" class="form-control text-base" id="kd_penyakit" name="kd_penyakit" value="${penyakit.kd_penyakit}" readonly>
@@ -245,17 +246,18 @@ $("#formDiagnosa").submit(function (e) {
 							<div class="row g-3">
 								<div class="col">
 									<label class="form-label">Keterangan</label>
-									<textarea name="ket" row="10" id="ket" class="form-control text-base" readonly>${penyakit.ket}</textarea>
+									<textarea name="ket" rows="4" cols="50" id="ket" class="form-control text-base" readonly>${penyakit.ket}</textarea>
 								</div>
 							</div>
 							<div class="row g-3">
 								<div class="col">
 									<label class="form-label">Solusi</label>
-									<textarea name="solusi" row="10" id="solusi" class="form-control text-base" readonly>${penyakit.solusi}</textarea>
+									<textarea name="solusi" rows="7" cols="50" id="solusi" class="form-control text-base" readonly>${penyakit.solusi}</textarea>
 								</div>
 							</div>`;
 			} else {
 				content += `<div class="row g-3">
+									<input type="hidden" name="nilai" value="${hasilObject.nilai}" readonly>
 									<div class="col">
 										<label class="form-label">Kesimpulan:</label>
 										<textarea name="solusi" id="solusi" class="form-control text-base" readonly>Gejala yang dipilih tidak sesuai dengan penyakit ${penyakit.nama}</textarea>

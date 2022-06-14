@@ -70,4 +70,31 @@ class Welcome extends CI_Controller {
 		$data['nilai'] = $nilai;
 		echo json_encode($data);		
 	}
+
+	public function exportPDF(){
+		$mpdf = new \Mpdf\Mpdf(['format' => 'A4', 'orientation' => 'P']);
+
+		$kd_penyakit = $this->input->post('kd_penyakit');
+		$data['penyakit'] = $this->AM->ambilData('penyakit', ['kd_penyakit' => $kd_penyakit]);
+		$gejala = $this->db->get_where('aturan', ['kd_penyakit' => $kd_penyakit]);
+		$kd_gejala = $gejala->result_array();
+		$x = 0;
+		for ($i=0; $i < $gejala->num_rows(); $i++) {
+			$g['gejala'.$i] = $this->input->post('gejala'.$i); 
+			if ($kd_gejala[$i]['kd_gejala'] == $g['gejala'.$i]) {
+				$data['gejala'][$x++] = $this->AM->ambilData('gejala', ['kd_gejala' => $g['gejala'.$i]]);
+			}
+		}
+		$data['nilai'] = $this->input->post('nilai');
+		$data['solusi'] = $this->input->post('solusi');
+		$print = $this->load->view('laporan/exportpdf', [
+			'penyakit' => $data['penyakit'],
+			'gejala' => $data['gejala'],
+			'nilai' => $data['nilai'],
+			'solusi' => $data['solusi']
+
+		], TRUE); 
+		$mpdf->WriteHTML($print);
+		$mpdf->Output();
+	}
 }

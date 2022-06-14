@@ -168,6 +168,7 @@
 			</div>
 			<!-- Modal -->
 			<div class="modal fade" id="modalDiagnosis" data-bs-backdrop="static" tabindex="-1" aria-labelledby="labelModalDiagnosis" aria-hidden="true">
+				<form action="<?= base_url('welcome/exportPDF') ?>" method="POST" target="_blank">
 				<div class="modal-dialog  modal-xl modal-dialog-centered modal-dialog-scrollable">
 					<div class="modal-content">
 						<div class="modal-header justify-content-center">
@@ -176,16 +177,21 @@
 						<div class="modal-body" id="bodyModalDiagnosis">
 							<p class="text-base">Gejala yang dipilih:</p>
 							<ol class="list-group list-group-numbered" id="listModalDiagnosa">
-								
 							</ol>
-							<div class="row" id="rowContentModalDiagnosa">
-								
+							<div class="row" id="rowContentModalDiagnosa">		
 							</div>
-						<div class="modal-footer justify-content-start">
-							<button type="button" id="btnCloseModal" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+							<div class="row mt-3">
+								<div class="col-1">
+									<button type="button" id="btnCloseModal" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+								</div>
+								<div class="col-2">
+									<input type="submit" id="btnExport" class="btn btn-primary" value="Export PDF">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				</form>
 			</div>
 			<!-- akhir modal -->
 		</section>
