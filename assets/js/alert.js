@@ -54,6 +54,11 @@ if (flashData) {
 			timer: 2000,
 			timerProgressBar: true,
 		});
+	} else if (flashData == "user akses") {
+		Swal.fire({
+			icon: "error",
+			text: "Anda tidak memiliki hak akses",
+		});
 	}
 }
 

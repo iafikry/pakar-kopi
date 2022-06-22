@@ -8,6 +8,22 @@ class Admin extends CI_Controller
 		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->model('Admin_model', 'AM');
+		//cek session
+		if (is_null($this->session->userdata('role'))) {
+			$this->session->unset_userdata('id');
+			$this->session->unset_userdata('username');
+			$this->session->unset_userdata('nama');
+			$this->session->unset_userdata('role');
+			$this->session->set_flashdata('message', 'user akses');
+			redirect('auth');
+		} elseif ($this->session->userdata('role') != 'pakar'||$this->session->userdata('role') != 'superAdmin') { //MASIH SALAH
+			$this->session->unset_userdata('id');
+			$this->session->unset_userdata('username');
+			$this->session->unset_userdata('nama');
+			$this->session->unset_userdata('role');
+			$this->session->set_flashdata('message', 'user akses');
+			redirect('auth');
+		}
 		
 	}
 
