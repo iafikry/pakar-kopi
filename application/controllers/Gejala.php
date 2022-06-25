@@ -8,6 +8,23 @@ class Gejala extends CI_Controller
 		parent::__construct();
 		$this->load->model('Gejala_model', 'GM');
 		$this->load->library('form_validation');
+		//cek session
+		$role = ($this->session->userdata('role') == 'pakar' || $this->session->userdata('role') == 'superAdmin');
+		if (is_null($this->session->userdata('role'))) {
+			$this->session->unset_userdata('id');
+			$this->session->unset_userdata('username');
+			$this->session->unset_userdata('nama');
+			$this->session->unset_userdata('role');
+			$this->session->set_flashdata('message', 'user akses');
+			redirect('auth');
+		} elseif ($role == false) {
+			$this->session->unset_userdata('id');
+			$this->session->unset_userdata('username');
+			$this->session->unset_userdata('nama');
+			$this->session->unset_userdata('role');
+			$this->session->set_flashdata('message', 'user akses');
+			redirect('auth');
+		}
 		
 	}
 
