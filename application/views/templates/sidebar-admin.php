@@ -9,7 +9,7 @@
 		</div>
 		<ul class="nav nav-pills flex-column mb-auto p-3">
 			<li class="nav-item">
-				<a class="nav-link active link-dark" id="menuDashboard" aria-current="page" href="<?= base_url('admin') ?>">
+				<a class="nav-link link-dark" id="menuDashboard" aria-current="page" href="<?= base_url('admin') ?>">
 				<i class="bi bi-house-fill"></i>
 				Dashboard
 				</a>

@@ -193,6 +193,10 @@ header {
 .link-dark {
 	color: #1e272e !important;
 }
+.nav-item > .link-dark:hover {
+	background-color: #2666cf !important;
+	color: #fff !important;
+}
 .list-continuing {
 	counter-increment: section !important;
 }

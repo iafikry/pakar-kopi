@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/') ?>style.css">
 	<!-- bootstrap icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+	<link rel="icon" href="<?= base_url(); ?>/assets/img/logo-fill.ico">
     <title>ES Kopi</title>
   </head>
   <body>
@@ -26,7 +27,7 @@
 						<a class="nav-txt-link text-light txt-menu" id="menu-diagnosis" aria-current="page" href="#page3">Diagnosis</a>
 						<a class="nav-txt-link text-light txt-menu" id="menu-informasi" href="#page2">Informasi
 						</a>
-						<a class="nav-txt-link text-light txt-menu" id="menu-tentang" href="#">Tentang</a>
+						<a class="nav-txt-link text-light txt-menu" id="menu-tentang" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">Tentang</a>
 					</div>
 					<div class="row">
 						<a class="btn text-white rounded-pill border border-white" id="btnLogin" href="<?= base_url('auth') ?>">Login</a>
@@ -280,6 +281,67 @@
 				</div>
 			</div>
 		</section>
+		<!-- modal tentang -->
+		<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="aboutModalLabel">Tentang</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="text-base fw-bold">Aplikasi ini merupakan hasil skripsi mahasiswa STMIK Horizon Karawang 2021/2022</p>
+						<table class="border-0 table">
+							<tbody>
+								<tr>
+									<td class="border-0">Nama</td>
+									<td class="border-0">:</td>
+									<td class="border-0">Reggy Al Farez</td>
+								</tr>
+								<tr>
+									<td class="border-0">NPM</td>
+									<td class="border-0">:</td>
+									<td class="border-0">43E57006185064</td>
+								</tr>
+								<tr>
+									<td class="border-0">Prodi</td>
+									<td class="border-0">:</td>
+									<td class="border-0">Informatika</td>
+								</tr>
+								<tr>
+									<td class="border-0">Pembimbing I</td>
+									<td class="border-0">:</td>
+									<td class="border-0">Arif Budimansyah Purba, M.Kom.</td>
+								</tr>
+								<tr>
+									<td class="border-0">Pembimbing II</td>
+									<td class="border-0">:</td>
+									<td class="border-0">Jajang Mulyana, S.T., M.M.</td>
+								</tr>
+								<tr>
+									<td class="border-0">Pembimbing di tempat penelitian</td>
+									<td class="border-0">:</td>
+									<td class="border-0">Adjo</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row justify-content-center">
+							<div class="col-md-7">
+								<p class="text-base">Kunjungi Website Resmi Horizon Karawang</p>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-md-5 d-flex flex-column justify-content-center">
+								<img src="<?= base_url('assets/img/logo-horizon.png') ?>" alt="logo-horizon" height="70">
+							</div>
+							<div class="col-md-5 d-flex flex-column justify-content-center">
+								<img src="<?= base_url('assets/img/logo-stmik.png') ?>" alt="logo-stmik-horizon" width="180">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	  </main>
 	  <footer>
 		  <div class="container">
